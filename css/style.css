@@ -11,6 +11,7 @@ header {
   padding: 2rem 12.5vw;
   position: fixed;
   color: white;
+  max-width: 1050px;
 }
 
 .logo {
@@ -33,7 +34,11 @@ nav {
   text-transform: uppercase;
   display: inline-block;
   text-decoration: none;
-  margin-right: 0.5em;
+  margin-right: 1em;
+}
+
+.nav-link:last-child {
+  margin-right: 0;
 }
 
 .nav-link a {
@@ -55,49 +60,41 @@ nav {
   background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../img/green-material-design.png) 50% 0 no-repeat fixed;
   background-size: cover;
   overflow: hidden;
-}
-
-.desc {
-  width: 75vw;
-  height: 50vh;
-  margin: 25vh 12.5vw;
   display: flex;
 }
 
+.desc {
+  display: flex;
+  width: calc(75vw - 3rem);
+  height: 45vh;
+  margin: auto;
+  max-width: calc(1050px - 3rem);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: rgb(117, 124, 135, 0.5);
+}
+
 .me {
+  margin-right: auto;
+  border-radius: 100%;
   height: 100%;
   width: auto;
-  border-radius: 100%;
-  margin-right: auto;
-  display: inline-block;
-  float: left;
 }
 
 .info {
-  display: inline-block;
-  text-align: center;
-  height: 100%;
-  color: white;
-}
-
-.info h2 {
-  text-transform: uppercase;
-  margin: 0;
-}
-
-.info hr {
-  width: 25%;
-  margin: 1rem auto;
-}
-
-.info p {
-  margin: 0;
+  width: 45%;
 }
 
 .info-container {
   display: flex;
   flex-direction: column;
   height: 100%;
+  text-align: center;
+}
+
+.info-container hr {
+  width: 5rem;
 }
 
 .info-buttons-container {
@@ -105,17 +102,25 @@ nav {
   display: flex;
 }
 
-.button {
-  width: 40%;
-  display: inline-block;
-  text-decoration: none;
-  padding: 0.4rem;
-  border: 1px solid white;
-  color: white;
-  border-radius: 5px;
-  font-weight: 900;
-}
-
 .info-about {
   margin-right: auto;
+}
+
+.button {
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 2.5rem;
+  border: 1px solid white;
+  border-radius: 8px;
+}
+
+/* INTRO SECTION END */
+
+/* MEDIA QUERIES */
+
+@media (min-width: 1400px) {
+  header {
+    padding-right: calc(50vw - 525px);
+    padding-left: calc(50vw - 525px);
+  }
 }

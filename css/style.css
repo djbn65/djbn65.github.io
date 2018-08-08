@@ -1,0 +1,124 @@
+/* MAIN STYLES */
+
+body {
+  margin: 0;
+  font-family: 'Product Sans', Calibri, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  width: calc(100vw - 4rem);
+  padding: 2rem;
+  position: fixed;
+  color: white;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.logo h2 {
+  text-transform: uppercase;
+  display: inline-block;
+  float: left;
+}
+
+nav {
+  float: right;
+  margin-top: 4.4px;
+  margin-bottom: 4.4px;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 0.5em;
+}
+
+.nav-link a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.75em;
+}
+
+.logo h2, .nav-link {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* MAIN STYLES END */
+
+/* INTRO SECTION */
+#intro {
+  height: 100vh;
+  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../img/green-material-design.png) 50% 0 no-repeat fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.desc {
+  width: 75vw;
+  height: 50vh;
+  margin: 25vh 12.5vw;
+}
+
+.me {
+  height: 100%;
+  width: auto;
+  border-radius: 100%;
+  margin-right: 5rem;
+  display: inline-block;
+  float: left;
+}
+
+.info {
+  display: inline-block;
+  width: calc(100% - 298px - 5rem);
+  text-align: center;
+  height: 100%;
+  color: white;
+}
+
+.info h2 {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.info hr {
+  width: 25%;
+  margin: 1rem auto;
+}
+
+.info p {
+  margin: 0;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.info-buttons-container {
+  margin-top: auto;
+}
+
+.button {
+  width: 40%;
+  display: inline-block;
+  text-decoration: none;
+  padding: 2%;
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+  font-weight: 900;
+}
+
+.info-about {
+  margin-right: 4%;
+}
+
+.info-freelance {
+  margin-left: 4%;
+}

@@ -7,8 +7,8 @@ body {
 }
 
 header {
-  width: calc(100vw - 4rem);
-  padding: 2rem;
+  width: 75vw;
+  padding: 2rem 12.5vw;
   position: fixed;
   color: white;
 }
@@ -61,20 +61,20 @@ nav {
   width: 75vw;
   height: 50vh;
   margin: 25vh 12.5vw;
+  display: flex;
 }
 
 .me {
   height: 100%;
   width: auto;
   border-radius: 100%;
-  margin-right: 5rem;
+  margin-right: auto;
   display: inline-block;
   float: left;
 }
 
 .info {
   display: inline-block;
-  width: calc(100% - 298px - 5rem);
   text-align: center;
   height: 100%;
   color: white;
@@ -102,13 +102,14 @@ nav {
 
 .info-buttons-container {
   margin-top: auto;
+  display: flex;
 }
 
 .button {
   width: 40%;
   display: inline-block;
   text-decoration: none;
-  padding: 2%;
+  padding: 0.4rem;
   border: 1px solid white;
   color: white;
   border-radius: 5px;
@@ -116,9 +117,5 @@ nav {
 }
 
 .info-about {
-  margin-right: 4%;
-}
-
-.info-freelance {
-  margin-left: 4%;
+  margin-right: auto;
 }

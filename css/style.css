@@ -107,6 +107,8 @@ nav {
 
 .info-container hr {
   width: 5rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .info-buttons-container {

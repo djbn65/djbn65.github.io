@@ -25,6 +25,11 @@ $(document).ready(() => {
     adjustFontSizes();
 
     var activePage = window.localStorage.getItem('activePage');
+
+    if(!activePage) {
+        activePage = '#about';
+    }
+
     $('a[href="' + activePage + '"]').click();
 });
 

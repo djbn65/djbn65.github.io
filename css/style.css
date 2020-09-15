@@ -259,6 +259,11 @@ body {
     max-width: 100%;
 }
 
+.center-page-box-info > .title-text {
+    margin-bottom: 50px;
+    margin-top: 0;
+}
+
 .center-page-box-info > * {
     position: relative;
 }
@@ -378,11 +383,6 @@ body {
 /* End Home Page Center Page Box Specific Responsive Styles */
 
 /* Education Page Center Page Box Specific Styles */
-#education .title-text {
-    margin-bottom: 25px;
-    margin-top: 0;
-}
-
 #education .subtitle-text {
     margin-top: 25px;
     margin-bottom: 20px;
@@ -418,12 +418,6 @@ body {
 /* End Education Page Center Page Box Specific Responsive Styles */
 
 /* Experience/Press Page Center Page Box Specific Styles */
-#experience .title-text,
-#press .title-text {
-    margin-bottom: 25px;
-    margin-top: 0;
-}
-
 #experience .experiences-grid,
 #press .press-grid {
     display: flex;
@@ -483,10 +477,6 @@ body {
     padding: 8px;
 }
 
-#portfolio .title-text {
-    margin-bottom: calc(var(--uniform-padding) * 1px);
-}
-
 #portfolio .portfolio-item {
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
@@ -497,6 +487,12 @@ body {
     flex-direction: column;
     margin: 0 8px 24px 8px;
     align-items: center;
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+
+#portfolio .portfolio-item:hover {
+    transform: scale(1.1);
 }
 
 #portfolio .portfolio-item img {

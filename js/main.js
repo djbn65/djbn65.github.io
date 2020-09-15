@@ -1,10 +1,3 @@
-const namePctHeight = .06;
-const genderPctHeight = .035;
-const descriptionHelloButtonPctHeight = 0.045;
-const helloButtonPaddingPctHeight = .025;
-const helloButtonPaddingPctWidth = .03714;
-const extracurricularPctMarginBottom = 0.05;
-
 function adjustFontSizes() {
     var centerPageBox = $('.center-page-box');
 
@@ -21,16 +14,29 @@ function adjustBoxWidths() {
     }
 }
 
-$(document).ready(() => {
-    adjustFontSizes();
-
+function setupCenterBoxes() {
     var activePage = window.localStorage.getItem('activePage');
 
     if(!activePage) {
         activePage = '#about';
     }
 
-    $('a[href="' + activePage + '"]').click();
+    $('.center-page-box').each(function(index, value) {
+        if($(this).is($(activePage))) {
+            $(this).css('left', '50%');
+        }
+    });
+}
+
+$(document).ready(() => {
+    adjustFontSizes();
+    setupCenterBoxes();
+
+    var activePage = window.localStorage.getItem('activePage');
+
+    if(!activePage) {
+        activePage = '#about';
+    }
 });
 
 $(window).resize(() => {
@@ -62,23 +68,37 @@ $('.navbar-brand').click(() => {
 $('.navbar a').click(function(e) {
     e.preventDefault();
 
-    window.localStorage.setItem("activePage", $(this)[0].hash);
+    var prevActivePage = window.localStorage.getItem('activePage');
 
-    $('.center-page-box').removeClass('active');
+    window.localStorage.setItem('activePage', $(this)[0].hash);
+
+    var activePage = window.localStorage.getItem('activePage');
+
     $('.navbar a.active').removeClass('active');
     $(this).addClass('active');
-    $($(this)[0].hash).addClass('active');
-
-    if(window.localStorage.getItem('activePage') === '#about') {
-        adjustFontSizes();
-    }
 
     adjustBoxWidths();
+
+    if($('.center-page-box').index($(prevActivePage)) > $('.center-page-box').index($(activePage))) {
+        $(activePage).css('left', '-150%');
+        $(prevActivePage).animate({
+            left: '150%',
+            opacity: 0
+        }, 500);
+    } else {
+        $(activePage).css('left', '150%');
+        $(prevActivePage).animate({
+            left: '-150%',
+            opacity: 0
+        }, 500);
+    }
+
+    $(activePage).animate({
+        left: '50%',
+        opacity: 1
+    }, 500);
 });
 
 $('#press .press-grid .large-box').click(function() {
-    console.log($(this))
     window.open($(this).data('link'), '_blank');
-
-    return false;
 });

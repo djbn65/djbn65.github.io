@@ -49,6 +49,14 @@ $(document).ready(() => {
 $(window).resize(() => {
     adjustFontSizes();
     adjustBoxWidths();
+
+    if($(window).width() > 991) {
+        $('.navbar').removeClass('expanded');
+        $('.navbar-collapse').removeClass('expanded');
+    } else if($('.navbar-collapse').hasClass('show')) {
+        $('.navbar').addClass('expanded');
+        $('.navbar-collapse').addClass('expanded');
+    }
 });
 
 $('.navbar-collapse').on('show.bs.collapse', () => {

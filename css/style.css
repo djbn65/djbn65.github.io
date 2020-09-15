@@ -43,6 +43,26 @@ body {
     font-weight: 900;
 }
 
+.copyright {
+    width: 100%;
+    position: fixed;
+    bottom: 29px;
+}
+
+.copyright-text {
+    font-weight: 900;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+@media (max-width: 814px) {
+    .copyright {
+        bottom: 17px;
+    }
+}
+
 /* Large Box Styles */
 
 .large-box {
@@ -174,7 +194,6 @@ body {
     padding-bottom: 0;
     background: white;
     border-radius: 5px;
-    height: 90px;
 }
 
 .navbar-brand {

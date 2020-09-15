@@ -397,13 +397,20 @@ body {
     #about .contact-me-button {
         margin-top: 25px;
     }
+
+    #about .me-img {
+        height: 158px;
+    }
 }
 
 /* End Home Page Center Page Box Specific Responsive Styles */
 
 /* Education Page Center Page Box Specific Styles */
+#education .large-box {
+    margin-bottom: 20px;
+}
+
 #education .subtitle-text {
-    margin-top: 25px;
     margin-bottom: 20px;
 }
 

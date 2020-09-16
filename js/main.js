@@ -1,16 +1,10 @@
-function adjustFontSizes() {
+function setCenterPageBoxTop() {
     var centerPageBox = $('.center-page-box');
 
     if($(window).width() > 814) {
         centerPageBox.css('top', $(window).height() / 2 - $('.center-page-box').height() / 2);
     } else {
-        centerPageBox.css('top', '');
-    }
-}
-
-function adjustBoxWidths() {
-    if(window.localStorage.getItem('activePage') === '#education') {
-        $('.extracurricular-grid').css('width', $('#education .large-box').innerWidth() + 'px');
+        centerPageBox.css('top', '0');
     }
 }
 
@@ -18,7 +12,7 @@ function setupCenterBoxes() {
     var activePage = window.localStorage.getItem('activePage');
 
     if(!activePage) {
-        activePage = '#about';
+        activePage = '#home';
     }
 
     $('.center-page-box').each(function(index, value) {
@@ -33,22 +27,20 @@ function goToDataLink() {
 }
 
 $(document).ready(() => {
-    adjustFontSizes();
-    adjustBoxWidths();
+    setCenterPageBoxTop();
     setupCenterBoxes();
 
     var activePage = window.localStorage.getItem('activePage');
 
     if(!activePage) {
-        activePage = '#about';
+        activePage = '#home';
     }
 
     $('a[href="' + activePage + '"]').click();
 });
 
 $(window).resize(() => {
-    adjustFontSizes();
-    adjustBoxWidths();
+    setCenterPageBoxTop();
 
     if($(window).width() > 991) {
         $('.navbar').removeClass('expanded');
@@ -91,8 +83,6 @@ $('.navbar a').click(function(e) {
 
     $('.navbar a.active').removeClass('active');
     $(this).addClass('active');
-
-    adjustBoxWidths();
 
     if(prevActivePage !== activePage) {
         if($('.center-page-box').index($(prevActivePage)) > $('.center-page-box').index($(activePage))) {

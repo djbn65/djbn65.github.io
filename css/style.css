@@ -29,11 +29,12 @@
     --small-rectangular-box-pct-height: 12.5%;
 }
 
-body {
+html, body {
     font-family: 'Roboto', sans-serif;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    position: fixed;
 }
 
 .title-text {
@@ -452,46 +453,336 @@ body {
 
 /* End Home Page Center Page Box Specific Responsive Styles */
 
-/* Education Page Center Page Box Specific Styles */
-#education .large-box {
-    margin-bottom: 20px;
-}
-
-#education .subtitle-text {
-    margin-bottom: 20px;
-}
-
-#education .extracurricular-grid {
+/* About Page Center Page Box Specific Styles */
+#about .about-content,
+#about .about-content .left-side,
+#about .about-content .right-side {
     display: flex;
+}
+
+#about .about-content .left-side,
+#about .about-content .right-side {
+    flex-direction: column;
+}
+
+#about .about-content .left-side {
+    margin-right: 25px;
+    width: 100%;
+}
+
+#about .about-content .right-side p:first-child {
+    margin-bottom: auto;
+}
+
+#about .about-content .left-side .small-box {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+#about .about-content .left-side .small-box:last-child {
+    margin-bottom: 0;
+}
+
+#about a {
+    padding: 7px 30px;
+    color: white;
+    border-radius: 500px;
+    font-size: 18px;
+    margin-top: 15px;
+    text-decoration: none;
+    transition: all 0.2s linear;
+}
+
+#about a.quote {
+    background-color: var(--site-accent-color);
+}
+
+#about a.info {
+    background-color: #4A4A4A;
+    margin-left: auto;
+}
+
+#about a:hover {
+    opacity: 0.8;
+}
+
+#about .about-content .left-side p {
+    font-weight: 900;
+    font-size: 20px;
+    margin: 0;
+    line-height: 21px;
+}
+
+#about .about-content .right-side p {
+    font-weight: 700;
+    font-size: 26px;
+    margin: 0;
+    line-height: 29px;
+}
+
+#about .about-content p span {
+    color: var(--site-accent-color);
+}
+
+#about .about-content p span.caps {
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+#about .about-content p span.italics {
+    font-style: italic;
+}
+
+#about .about-content .right-side {
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    flex-wrap: wrap;
-    height: var(--extracurriculars-grid-pct-height);
 }
 
-#education .extracurricular-grid > * {
-    width: 46%;
-    margin-bottom: 20px;
+#about .button-container {
+    margin: auto;
+    width: 100%;
+    display: flex;
 }
 
-/* End Education Page Center Page Box Specific Styles */
+/* End About Page Center Page Box Specific Styles */
 
-/* Education Page Center Page Box Specific Responsive Styles */
-@media (max-width: 814px) {
-    #education .extracurricular-grid > * {
-        margin-bottom: 20px;
+/* About Page Center Page Box Specific Responsive Styles */
+@media (max-width: 803px) {
+    #about .about-content .left-side p {
+        font-weight: 900;
+        font-size: 18px;
+        margin: 0;
+        line-height: 21px;
+    }
+    
+    #about .about-content .right-side p {
+        font-weight: 700;
+        font-size: 23px;
+        margin: 0;
+        line-height: 29px;
     }
 }
 
-@media (max-width: 620px) {
-    #education .extracurricular-grid > * {
+@media (max-width: 700px) {
+    #about .about-content {
+        flex-direction: column;
+    }
+
+    #about .about-content .left-side {
+        margin: 0;
+        margin-bottom: 15px;
+    }
+
+    #about .about-content .right-side p:first-child {
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 575px) {
+    #about .button-container {
+        flex-direction: column;
+    }
+
+    #about .button-container a {
         width: 100%;
+        text-align: center;
     }
 }
 
-/* End Education Page Center Page Box Specific Responsive Styles */
+/* End About Page Center Page Box Specific Responsive Styles */
 
-/* Experience/Press Page Center Page Box Specific Styles */
-#experience .experiences-grid,
+/* Services Page Center Page Box Specific Styles */
+#services .service-grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+#services .service-grid .service-item {
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    margin: 0 20px;
+    padding: 30px 14px;
+    text-align: center;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+#services .service-grid .service-item:first-child {
+    margin-left: 0;
+}
+
+#services .service-grid .service-item:last-child {
+    margin-right: 0;
+}
+
+#services .service-grid .service-item img {
+    height: 90px;
+    margin-bottom: 10px;
+}
+
+#services .service-grid .service-item h3 {
+    font-weight: 800;
+    font-size: 14px;
+}
+
+#services .service-grid .service-item p {
+    font-weight: 600;
+    font-size: 13px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* End Services Page Center Page Box Specific Styles */
+
+/* Services Page Center Page Box Specific Responsive Styles */
+@media (max-width: 729px) {
+    #services .service-grid {
+        flex-direction: column;
+        width: 100%;
+        max-width: 481px;
+    }
+
+    #services .service-grid .service-item {
+        width: 100%;
+        margin: 20px 0;
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    #services .service-grid .service-item:first-child {
+        margin-top: 0;
+    }
+    
+    #services .service-grid .service-item:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* End Services Page Center Page Box Specific Responsive Styles */
+
+/* Portfolio Page Center Page Box Specific Styles */
+#portfolio .tabs {
+    margin-top: -41px;
+    margin-bottom: 16px;
+}
+
+#portfolio .tabs a {
+    text-decoration: none;
+    color: #C0C0C0;
+    font-weight: 900;
+    font-size: 14px;
+    margin-right: 15px;
+    transition: all 0.2s linear;
+}
+
+#portfolio .tabs a.active,
+#portfolio .tabs a:hover {
+    color: var(--site-accent-color);
+}
+
+#portfolio .tabs a:last-child {
+    margin-right: 0;
+}
+
+#portfolio .portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 90%;
+    max-width: 570px;
+    padding: 10px;
+}
+
+#portfolio .portfolio-grid .item {
+    width: 150px;
+    position: relative;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    margin: 0 10px 15px 10px;
+    border-radius: 15px;
+}
+
+#portfolio .portfolio-grid .item .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 15px;
+    display: flex;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+}
+
+#portfolio .portfolio-grid .item .overlay:hover {
+    opacity: 1;
+}
+
+#portfolio .portfolio-grid .item .overlay .text {
+    margin: auto 19px;
+}
+
+#portfolio .portfolio-grid .item .overlay p.title {
+    font-weight: bold;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0);;
+    margin: 0;
+    margin-bottom: 8px;
+    transition: all 0.2s linear;
+}
+
+#portfolio .portfolio-grid .item .overlay p.descr {
+    font-weight: 500;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0);
+    margin: 0;
+    transition: all 0.2s linear;
+}
+
+#portfolio .portfolio-grid .item .overlay:hover p {
+    color: rgba(255, 255, 255, 1);
+}
+
+#portfolio .portfolio-grid .item .overlay .ig-logo {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 20px;
+    opacity: 0;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+#portfolio .portfolio-grid .item .overlay .ig-logo:hover {
+    transform: scale(1.05);
+}
+
+#portfolio .portfolio-grid .item .overlay:hover .ig-logo {
+    opacity: 1;
+}
+
+#portfolio .portfolio-grid .item img {
+    width: 100%;
+}
+
+/*filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.5));*/
+
+/* End Portfolio Page Center Page Box Specific Styles */
+
+/* Portfolio Page Center Page Box Specific Responsive Styles */
+
+
+/* End Portfolio Page Center Page Box Specific Responsive Styles */
+
+/* Press Page Center Page Box Specific Styles */
 #press .press-grid {
     display: flex;
     flex-direction: column;
@@ -500,7 +791,6 @@ body {
     align-items: center;
 }
 
-#experience .experiences-grid .large-box,
 #press .press-grid .large-box {
     margin-bottom: 20px;
 }
@@ -541,51 +831,3 @@ body {
 }
 
 /* End Experience/Press Page Center Page Box Specific Responsive Styles */
-
-/* Portfolio Page Center Page Box Specific Styles */
-#portfolio .portfolio-grid {
-    max-width: 481px;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 8px;
-}
-
-#portfolio .portfolio-item {
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-    width: 100px;
-    height: 125px;
-    padding: 20px 9px 0 9px;
-    display: flex;
-    flex-direction: column;
-    margin: 0 8px 24px 8px;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.1s linear;
-}
-
-#portfolio .portfolio-item:hover {
-    transform: scale(1.1);
-}
-
-#portfolio .portfolio-item img {
-    width: 60px;
-}
-
-#portfolio .portfolio-item h3 {
-    font-weight: 500;
-    font-size: 14px;
-    margin: auto;
-    text-align: center;
-}
-
-/* End Portfolio Page Center Page Box Specific Styles */
-
-/* Portfolio Page Center Page Box Specific Responsive Styles */
-@media (max-width: 639px) {
-    #portfolio .portfolio-grid {
-        justify-content: space-around;
-    }
-}
-
-/* End Portfolio Page Center Page Box Specific Responsive Styles */

@@ -259,7 +259,7 @@ html, body {
     position: absolute;
     left: 150%;
     transform: translateX(-50%);
-    max-height: calc(100% - (var(--navbar-total-height) * 1px) - (var(--uniform-padding) * 1px));
+    max-height: calc(100vh - (var(--navbar-total-height) * 1px) - (var(--uniform-padding) * 1px));
     overflow-y: auto;
 }
 
@@ -637,7 +637,6 @@ html, body {
     font-weight: 600;
     font-size: 13px;
     margin-top: auto;
-    margin-bottom: auto;
 }
 
 /* End Services Page Center Page Box Specific Styles */

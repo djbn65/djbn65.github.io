@@ -46,6 +46,8 @@ function goToDataLink() {
 $(document).ready(() => {
     setCenterPageBoxTop();
     setupCenterBoxes();
+
+    $('body').height(window.innerHeight);
     
     var activePage = window.localStorage.getItem('activePage');
 
@@ -63,6 +65,8 @@ $(document).ready(() => {
 $(window).resize(() => {
     setCenterPageBoxTop();
     adjustAboutPage();
+
+    $('body').height(window.innerHeight);
 
     if($(window).width() > 991) {
         $('.navbar').removeClass('expanded');

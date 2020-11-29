@@ -439,6 +439,11 @@ body {
     transition: all 0.1s linear;
 }
 
+#press {
+    max-height: calc(100% - (var(--navbar-total-height) * 1px) - (var(--uniform-padding) * 2px));
+    overflow-y: auto;
+}
+
 #press .press-grid .large-box {
     cursor: pointer;
     transition: all 0.1s linear;

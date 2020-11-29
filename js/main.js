@@ -54,7 +54,7 @@ $('.navbar-brand').click(() => {
 });
 
 $('.navbar a').click(function(e) {
-    if (this.hash.startsWith('#')) {
+    if (this.hash !== "") {
         // Prevent default anchor click behavior
 
         $('.navbar a').removeClass('active');

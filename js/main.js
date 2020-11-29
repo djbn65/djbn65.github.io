@@ -1,41 +1,6 @@
-function setCenterPageBoxTop() {
-    var centerPageBox = $('.center-page-box');
-
-    if($(window).width() > 814) {
-        centerPageBox.css('top', $(window).height() / 2 - $('.center-page-box').height() / 2);
-    } else {
-        centerPageBox.css('top', '0');
-    }
-}
-
-function setupCenterBoxes() {
-    var activePage = window.localStorage.getItem('activePage');
-
-    if(!activePage) {
-        activePage = '#home';
-        window.localStorage.setItem('activePage', activePage);
-    }
-
-    $('.center-page-box').each(function(index, value) {
-        if($(this).is($(activePage))) {
-            $(this).css('left', '50%');
-        }
-    });
-}
-
-function adjustAboutPage() {
-    const quoteButton = $('#about .button-container a.quote');
-    const infoButton = $('#about .button-container a.info');
-
-    if(window.localStorage.getItem('activePage') === '#about' && $(window).width() > 700) {
-        const leftSide = $('#about .about-content .left-side .box-container');
-        const rightSide = $('#about .about-content .right-side');
-
-        quoteButton.css('margin-left', (leftSide.width() - quoteButton.innerWidth()) / 2 + 'px');
-        infoButton.css('margin-right', (rightSide.innerWidth() - infoButton.innerWidth()) / 2 + 'px');
-    } else {
-        quoteButton.css('margin-left', '');
-        infoButton.css('margin-right', '');
+function adjustBoxWidths() {
+    if(window.localStorage.getItem('activePage') === '#education') {
+        $('.extracurricular-grid').css('width', $('#education .large-box').innerWidth() + 'px');
     }
 }
 
@@ -44,29 +9,19 @@ function goToDataLink() {
 }
 
 $(document).ready(() => {
-    $('body').height(window.innerHeight);
-    
-    setCenterPageBoxTop();
-    setupCenterBoxes();
-    
+    adjustBoxWidths();
+
     var activePage = window.localStorage.getItem('activePage');
 
     if(!activePage) {
-        activePage = '#home';
+        activePage = '#about';
     }
 
-    $('#portfolio .tabs a').each(function() {
-        $(this).html($(this)[0].hash.substr(1));
-    });
-    
     $('a[href="' + activePage + '"]').click();
 });
 
 $(window).resize(() => {
-    $('body').height(window.innerHeight);
-    
-    setCenterPageBoxTop();
-    adjustAboutPage();
+    adjustBoxWidths();
 
     if($(window).width() > 991) {
         $('.navbar').removeClass('expanded');
@@ -99,68 +54,27 @@ $('.navbar-brand').click(() => {
 });
 
 $('.navbar a').click(function(e) {
-    e.preventDefault();
+    if (this.hash !== "") {
+        // Prevent default anchor click behavior
 
-    var prevActivePage = window.localStorage.getItem('activePage');
+        $('.navbar a').removeClass('active');
+        $(this).addClass('active');
 
-    window.localStorage.setItem('activePage', $(this)[0].hash);
-
-    var activePage = window.localStorage.getItem('activePage');
-    
-    adjustAboutPage();
-
-    $('.navbar a.active').removeClass('active');
-    $(this).addClass('active');
-
-    if(prevActivePage !== activePage) {
-        if($('.center-page-box').index($(prevActivePage)) > $('.center-page-box').index($(activePage))) {
-            $(activePage).css('left', '-150%');
-            $(prevActivePage).animate({
-                left: '150%',
-                opacity: 0
-            }, 500);
-        } else {
-            $(activePage).css('left', '150%');
-            $(prevActivePage).animate({
-                left: '-150%',
-                opacity: 0
-            }, 500);
-        }
-
-        $(activePage).animate({
-            left: '50%',
-            opacity: 1
-        }, 500);
-    }
-    
-    if(activePage === '#portfolio') {
-        var activePortfolioFilter = window.localStorage.getItem('activePortfolioFilter');
-
-        if(!activePortfolioFilter) {
-            activePortfolioFilter = '#all';
-        }
-
-        $('#portfolio a[href="' + activePortfolioFilter + '"]').click();
+        e.preventDefault();
+  
+        // Store hash
+        var hash = this.hash;
+  
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top - 200
+        }, 800, function() {});
     }
 });
 
-$('#portfolio a').click(function(e) {
-    e.preventDefault();
-    
-    window.localStorage.setItem('activePortfolioFilter', $(this)[0].hash);
-    var classNameToShow = $(this)[0].hash.substr(1);
-
-    $('#portfolio a').removeClass('active');
-    $(this).addClass('active');
-
-    $('#portfolio .portfolio-grid .item').each(function() {
-        if($(this).hasClass(classNameToShow) || classNameToShow === 'all') {
-            $(this).css('display', '');
-        } else {
-            $(this).css('display', 'none');
-        }
-    });
-});
-
+$('#education .large-box').click(goToDataLink);
+$('#education .extracurricular-grid .small-box').click(goToDataLink);
+$('#portfolio .portfolio-grid .portfolio-item').click(goToDataLink);
+$('#experience .experiences-grid .large-box').click(goToDataLink);
 $('#press .press-grid .large-box').click(goToDataLink);
-$('#portfolio .portfolio-grid .item .ig-logo').click(goToDataLink);

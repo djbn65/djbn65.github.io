@@ -823,3 +823,27 @@ body {
 }
 
 /* End Experience/Press Page Center Page Box Specific Responsive Styles */
+
+/* Social Media Page Center Page Box Specific Styles */
+#social .icons a {
+    margin: 7.5px;
+    transition: all 0.2s linear;
+}
+
+#social .icons a:hover {
+    text-decoration: none;
+}
+
+#social .icons a img {
+    transition: all 0.2s linear;
+}
+
+#social .icons a:hover img {
+    transform: scale(1.05);
+}
+
+/* End Social Media Page Center Page Box Specific Styles */
+
+/* Social Media Page Center Page Box Specific Responsive Styles */
+
+/* End Social Media Page Center Page Box Specific Responsive Styles */

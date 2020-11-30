@@ -3,29 +3,29 @@
     <head>
         <!-- Meta Information -->
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         
         <!-- for Google -->
-        <meta name="description"      content="Christopher Gu - Personal Website">
-        <meta name="keywords"         content="christopher gu, chris gu, gu christopher, gu_christopher, gu chris, personal website, website, missouri, missouri s&t, missouri university of science & technology, microsoft, product manager, instagram, instagram filters, instagram effects, spark ar, guess the gibberish, gibberish">
+        <meta name="description"      content="Christopher Gu - AR Website">
+        <meta name="keywords"         content="christopher gu, chris gu, christopher, gu, gu_christopher gu christopher, gu chris, website, ar website, ar, augmented reality, spark ar, instagram filters, instagram effects, spark ar filters, spark ar effects, guess the gibberish, gibberish">
         <meta name="author"           content="Christopher Gu, Dylan Burr">
         <!-- <meta name="theme-color"      content="#22292c"> -->
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178007512-1"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-178689383-1"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'UA-178007512-1');
+            gtag('config', 'UA-178689383-1');
         </script>
 
         <title>Christopher Gu</title>
 
         <!-- Browser Tab Icon -->
-        <link rel="shortcut icon" href="img/fav.png">
+        <link rel="shortcut icon" href="img/fav icon.png">
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -36,307 +36,555 @@
         <!-- Main Site Styling -->
         <link rel="stylesheet" href="css/style.css">
     </head>
+    <body>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#home">cg/ar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="ml-auto navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">about</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#portfolio">portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#press">press</a>
+                </li>
+                </ul>
+            </div>
+        </nav>
 
-    <nav id="main-nav" class="navbar fixed-top navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#about">cg</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="ml-auto navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="https://ar.christophergu.me" target="_blank">ar</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#education">education</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#experience">experience</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#portfolio">portfolio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#press">press</a>
-            </li>
-            </ul>
-        </div>
-    </nav>
-
-    <body data-spy="scroll" data-target="#main-nav" data-offset="200">
         <!-- To make more of something, you esentially just need to copy/paste the large-box, small-box, portfolio-item divs and replace the relevant information -->
+        <div id="home" class="center-page-box">
+            <h1 class="large-home-text">modernize your marketing with augmented reality <span>instagram effects</span></h1>
+            <div class="home-button-grid">
+                <a class="quote" href="#about">learn more</a>
+            </div>
+        </div>
+        
         <div id="about" class="center-page-box">
-            <div class="me-img-container">
-                <img class="me-img" src="img/chrisgu.png">
-            </div>
-            <h2 class="name title-text">christopher gu</h2>
-            <p class="gender">(he/him)</p>
-            <p class="description">Hi! I’m a computer science senior at Missouri S&T and will be a product manager at Microsoft. These days, I’m super passionate about augmented reality, social media, and startups!</p>
-            <div class="social-media">
-                <a id="insta" class="social-icon" href="https://www.instagram.com/gu_christopher/" target="_blank">
-                    <img src="img/socials_insta.png">
-                </a>
-                <a id="linkedin" class="social-icon" href="https://www.linkedin.com/in/christopherlgu/" target="_blank">
-                    <img src="img/socials_linkedin.png">
-                </a>
-                <a id="tiktok" class="social-icon" href="https://www.tiktok.com/@gu_christopher" target="_blank">
-                    <img src="img/socials_tiktok.png">
-                </a>
-                <a id="twitter" class="social-icon" href="https://twitter.com/gu_christopher" target="_blank">
-                    <img src="img/socials_twitter.png">
-                </a>
-                <a id="cv" class="social-icon" href="https://drive.google.com/file/d/1P33RP7g4xnzD5atz8-Gq26-Yub0lu5Ap/view?usp=sharing" target="_blank">
-                    <img src="img/socials_cv.png">
-                </a>
-            </div>
-            <a class="contact-me-button" href="mailto:cleegu@gmail.com">
-                say hello! 👋
-            </a>
-        </div>
-
-        <div id="education" class="center-page-box">
-            <h2 class="title-text">education</h2>
-            <!-- Education item template (Copy/paste to add more)
-                <div class="large-box">
-                    <div class="large-box-img">
-                        <img src="img/mst.png">
-                    </div>
-                    <div class="large-box-text">
-                        <h2 class="title">Missouri University of Science &amp; Technology</h2>
-                        <h3 class="subtitle">Bachelor of Science - BS, Computer Science, 3.86</h3>
-                        <h4 class="extra-info">August 2016 - December 2020</h4>
-                    </div>
+            <h2 class="title-text">about</h2>
+            <div class="about-content">
+                <p>
+                    i build <span>fun</span> and <span>interactive</span> AR experiences for brands, businesses, and everyone in-between. in the business of creating <span>awe</span> and <span>envy</span>, <span>clicks</span> and <span>conversions</span>, with <span>speed</span> and at <span>scale</span>.
+                </p>
+                <div class="about-gallery">
+                    <img src="img/gallery 1.png" />
+                    <img src="img/gallery 2.png" />
+                    <img src="img/gallery 3.png" />
+                    <img src="img/gallery 4.png" />
+                    <img src="img/gallery 5.png" />
+                    <img src="img/gallery 6.png" />
+                    <img src="img/gallery 7.png" />
+                    <img src="img/gallery 8.png" />
+                    <img src="img/gallery 9.png" />
                 </div>
-            -->
-            <div class="large-box" data-link="https://www.mst.edu/">
-                <div class="large-box-img">
-                    <img src="img/education_mst.png">
-                </div>
-                <div class="large-box-text">
-                    <h2 class="title">Missouri University of Science &amp; Technology</h2>
-                    <h3 class="subtitle">Bachelor of Science - BS, Computer Science, 3.81</h3>
-                    <h4 class="extra-info">August 2016 - December 2020</h4>
-                </div>
-            </div>
-            <h3 class="subtitle-text">extracurriculars</h3>
-            <div class="extracurricular-grid">
-                <!-- Extracurricular items template (Copy/paste to add more)
-                    <div class="small-box">
-                        <div class="small-box-img">
-                            <img src="img/pickhacks.png">
-                        </div>
-                        <div class="small-box-text">
-                            <h2 class="title">PickHacks</h2>
-                            <h3 class="subtitle">Co-Founder, Co-Director</h3>
-                        </div>
-                    </div>
-                -->
-                <div class="small-box" data-link="https://pickhacks.io/">
-                    <div class="small-box-img">
-                        <img src="img/extra_pickhacks.png">
-                    </div>
-                    <div class="small-box-text">
-                        <h2 class="title">PickHacks</h2>
-                        <h3 class="subtitle">Co-Founder, Co-Director</h3>
-                    </div>
-                </div>
-                <div class="small-box" data-link="https://www.youtube.com/channel/UCi6VFKxq1kOG468q9LYW38A">
-                    <div class="small-box-img">
-                        <img src="img/extra_minerkey.png">
-                    </div>
-                    <div class="small-box-text">
-                        <h2 class="title">Miner Key A Cappella</h2>
-                        <h3 class="subtitle">Founder, President, Music Director</h3>
-                    </div>
-                </div>
-                <div class="small-box" data-link="https://mstacm.org/">
-                    <div class="small-box-img">
-                        <img src="img/extra_acm.png">
-                    </div>
-                    <div class="small-box-text">
-                        <h2 class="title">ACM</h2>
-                        <h3 class="subtitle">Vice President, ACM Hack Chair</h3>
-                    </div>
-                </div>
-                <div class="small-box" data-link="https://www.instagram.com/sandtspectrum/">
-                    <div class="small-box-img">
-                        <img src="img/extra_spectrum.png">
-                    </div>
-                    <div class="small-box-text">
-                        <h2 class="title">SPECTRUM</h2>
-                        <h3 class="subtitle">Public Relations</h3>
-                    </div>
-                </div>
-                <div class="small-box" data-link="https://taventure.org/">
-                    <div class="small-box-img">
-                        <img src="img/extra_tavtech.png">
-                    </div>
-                    <div class="small-box-text">
-                        <h2 class="title">TAVtech</h2>
-                        <h3 class="subtitle">Cybsersecurity Fellow</h3>
-                    </div>
-                </div>
-                <div class="small-box" data-link="https://www.outforundergrad.org/">
-                    <div class="small-box-img">
-                        <img src="img/extra_o4u.png">
-                    </div>
-                    <div class="small-box-text">
-                        <h2 class="title">Out for Undergrad</h2>
-                        <h3 class="subtitle">Campus Ambassador, Alumni </h3>
-                    </div>
-                </div>
-                <div class="small-box" data-link="https://top.mlh.io/">
-                    <div class="small-box-img">
-                        <img src="img/extra_mlh.png">
-                    </div>
-                    <div class="small-box-text">
-                        <h2 class="title">Major League Hacking</h2>
-                        <h3 class="subtitle">Community Expert, Top 50 Hacker</h3>
-                    </div>
-                </div>
-                <div class="small-box" data-link="https://cs.mst.edu/">
-                    <div class="small-box-img">
-                        <img src="img/extra_mst.png">
-                    </div>
-                    <div class="small-box-text">
-                        <h2 class="title">Missouri S&T CS</h2>
-                        <h3 class="subtitle">Student Ambassador</h3>
-                    </div>
-                </div>
-                <div class="small-box" data-link="https://studentambassadors.microsoft.com/">
-                    <div class="small-box-img">
-                        <img src="img/extra_microsoft.png">
-                    </div>
-                    <div class="small-box-text">
-                        <h2 class="title">Microsoft</h2>
-                        <h3 class="subtitle">Student Partner</h3>
-                    </div>
-                </div>
-                <div class="small-box" data-link="https://www.impactlabs.io/">
-                    <div class="small-box-img">
-                        <img src="img/extra_impactlabs.png">
-                    </div>
-                    <div class="small-box-text">
-                        <h2 class="title">Impact Labs</h2>
-                        <h3 class="subtitle">Sponsorship Director</h3>
-                    </div>
-                </div>
-                <div class="small-box" data-link="https://outintech.com/">
-                    <div class="small-box-img">
-                        <img src="img/extra_outintech.png">
-                    </div>
-                    <div class="small-box-text">
-                        <h2 class="title">Out in Tech</h2>
-                        <h3 class="subtitle">Mentee</h3>
-                    </div>
-                </div>
+                <div class="gallery-buttons"></div>
             </div>
         </div>
 
-        <div id="experience" class="center-page-box">
-            <h2 class="title-text">experience</h2>
-            <div class="experiences-grid">
-                <!-- Experience item template (Copy/paste to add more)
-                    <div class="large-box">
-                        <div class="large-box-img">
-                            <img src="img/microsoft.png">
-                        </div>
-                        <div class="large-box-text">
-                            <h2 class="title">Microsoft Corporation</h2>
-                            <h3 class="subtitle">Program/Product Manager</h3>
-                            <h4 class="extra-info">March 2021</h4>
-                        </div>
+        <div id="services" class="center-page-box">
+            <h2 class="title-text">services</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <div class="service-img">
+                        <img src="img/purplelogo.png">
                     </div>
-                -->
-                <div class="large-box" data-link="https://www.microsoft.com/en-us/">
-                    <div class="large-box-img">
-                        <img src="img/exp_microsoft.png">
-                    </div>
-                    <div class="large-box-text">
-                        <h2 class="title">Microsoft Corporation</h2>
-                        <h3 class="subtitle">Program/Product Manager</h3>
-                        <h4 class="extra-info">March 2021</h4>
-                    </div>
+                    <h3>templated effects</h3>
+                    <p>A branded/slightly modified copy of a pre-existing filter. The options are limited to ONLY my personal filters.</p>
                 </div>
-                <div class="large-box" data-link="https://outintech.com/">
-                    <div class="large-box-img">
-                        <img src="img/exp_outintech.png">
+                <div class="service-item">
+                    <div class="service-img">
+                        <img src="img/pinklogo.png">
                     </div>
-                    <div class="large-box-text">
-                        <h2 class="title">Out in Tech</h2>
-                        <h3 class="subtitle">Social Media Intern</h3>
-                        <h4 class="extra-info">September 2020 - December 2020</h4>
-                    </div>
+                    <h3>custom effects</h3>
+                    <p>A unique custom filter of your choice. We work together to develop/propose ideas adpated to your requirements.</p>
                 </div>
-                <div class="large-box" data-link="https://www.microsoft.com/en-us/">
-                    <div class="large-box-img">
-                        <img src="img/exp_microsoft.png">
+                <div class="service-item">
+                    <div class="service-img">
+                        <img src="img/orangelogo.png">
                     </div>
-                    <div class="large-box-text">
-                        <h2 class="title">Microsoft Corporation</h2>
-                        <h3 class="subtitle">Product Management Intern</h3>
-                        <h4 class="extra-info">May 2020 - August 2020</h4>
-                    </div>
-                </div>
-                <div class="large-box" data-link="https://www.microsoft.com/en-us/">
-                    <div class="large-box-img">
-                        <img src="img/exp_microsoft.png">
-                    </div>
-                    <div class="large-box-text">
-                        <h2 class="title">Microsoft Corporation</h2>
-                        <h3 class="subtitle">Product Management Intern</h3>
-                        <h4 class="extra-info">May 2019 - August 2019</h4>
-                    </div>
-                </div>
-                <div class="large-box" data-link="https://www.up.com/">
-                    <div class="large-box-img">
-                        <img src="img/exp_unionpacific.png">
-                    </div>
-                    <div class="large-box-text">
-                        <h2 class="title">Union Pacific Railroad</h2>
-                        <h3 class="subtitle">Software Engineering Intern</h3>
-                        <h4 class="extra-info">May 2018 - August 2018</h4>
-                    </div>
+                    <h3>marketing & distribution</h3>
+                    <p>Creation & execution of a plan to distribute, broadcast your effect to both of our networks & insta in general.</p>
                 </div>
             </div>
         </div>
 
         <div id="portfolio" class="center-page-box">
             <h2 class="title-text">portfolio</h2>
+            <div class="tabs">
+                <a href="#all"></a>
+                <a href="#games"></a>
+                <a href="#aesthetics"></a>
+                <a href="#randomizers"></a>
+                <a href="#other"></a>
+            </div>
             <div class="portfolio-grid">
-                <!-- Portfolio item template (Copy/paste to add more)
-                    <div class="portfolio-item" data-link="https://ar.christophergu.me">
-                        <img src="img/igeffects.png">
-                        <h3 class="portofolio-item-title">instagram effects</h3>
+                <div class="item aesthetics">
+                    <img src="img/effect46.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">movie poster</p>
+                            <p class="descr">dynamic text that emulates the title and credits of a movie poster, but with the actual day of the week and date</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/789300558577001/">
                     </div>
-                -->
-                <div class="portfolio-item" data-link="https://ar.christophergu.me">
-                    <img src="img/port_igeffects.png">
-                    <h3 class="portofolio-item-title">instagram effects</h3>
                 </div>
-                <div class="portfolio-item" data-link="https://devpost.com/Gooey">
-                    <img src="img/port_hackathonprojs.png">
-                    <h3 class="portofolio-item-title">hackathon projects</h3>
+                <div class="item aesthetics">
+                    <img src="img/effect45.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">quibi</p>
+                            <p class="descr">a border frame with a curved radius to emulate the ads that quibi has put out in the past with a gray background</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/244434916968197/">
+                    </div>
                 </div>
-                <div class="portfolio-item" data-link="">
-                    <img src="img/port_artdesign.png">
-                    <h3 class="portofolio-item-title">art &amp; design</h3>
+                <div class="item other">
+                    <img src="img/effect44.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">slit scan</p>
+                            <p class="descr">photographic process where a moveable slide freezes the frame as it slides across the screen</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/651758862385848/">
+                    </div>
                 </div>
-                <div class="portfolio-item" data-link="https://www.stoplite.io">
-                    <img src="img/port_startups.png">
-                    <h3 class="portofolio-item-title">startups</h3>
+                <div class="item randomizers">
+                    <img src="img/effect43.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">shower thoughts</p>
+                            <p class="descr">users receive a randomly selected shower thought star wars style w/ retro music</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/319284249135861/">
+                    </div>
                 </div>
-                <div class="portfolio-item" data-link="https://www.youtube.com/channel/UCi6VFKxq1kOG468q9LYW38A">
-                    <img src="img/port_music.png">
-                    <h3 class="portofolio-item-title">music</h3>
+                <div class="item other">
+                    <img src="img/effect42.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">grindr grid</p>
+                            <p class="descr">emulates the grindr app with 12 mini profiles, which sequentially freeze when tapped</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/2821843454719749/">
+                    </div>
                 </div>
-                <div class="portfolio-item" data-link="">
-                    <img src="img/port_photography.png">
-                    <h3 class="portofolio-item-title">photography</h3>
+                <div class="item aesthetics">
+                    <img src="img/effect41.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">vogue vote</p>
+                            <p class="descr">applies a floating text box and advanced retouching to users in order to emulate the "vogue challenge", but with a twist</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/4316887638382890/">
+                    </div>
                 </div>
-                <div class="portfolio-item" data-link="">
-                    <img src="img/port_misc.png">
-                    <h3 class="portofolio-item-title">misc.</h3>
+                <div class="item other">
+                    <img src="img/effect40.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">low battery</p>
+                            <p class="descr">users tap the screen to activate a fake iPhone “low battery” pop-up to prank their followers</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/330770228355064/">
+                    </div>
+                </div>
+                <div class="item other">
+                    <img src="img/effect39.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">noseless</p>
+                            <p class="descr">combines 2 camera textures to create an illusion in which users are missing their noses</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/322866062119250/?ch=MTg5MmE3NjIwMDJkODE3Y2Q3OWRkMjMyMmI2ZTc3NmY%3D">
+                    </div>
+                </div>
+                <div class="item games">
+                    <img src="img/effect38.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">song association</p>
+                            <p class="descr">prompts users to sing a song containing a randomly selected word via a Spotify-inspired design</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/729637441101038/">
+                    </div>
+                </div>
+                <div class="item other">
+                    <img src="img/effect37.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">boomerang pro</p>
+                            <p class="descr">users can tap to shoot a boomerang and then capture a normal video with that boomerang in the corner</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/568793947149358/?ch=ZTQzM2NhZGRkOGE5MTk2YjMyZDgzZjg2Y2MzZWU3Y2M%3D">
+                    </div>
+                </div>
+                <div class="item other">
+                    <img src="img/effect36.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">sober</p>
+                            <p class="descr">users can experience that “dizzy” feeling via delay frames and camera segmentation</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/677199482833345/?ch=OGRiYjg4ZTYxYjgwNDhmZGI2NDJiYWIxNzFiMDVhYTU%3D">
+                    </div>
+                </div>
+                <div class="item aesthetics">
+                    <img src="img/effect35.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">dreamy</p>
+                            <p class="descr">applies gaussian blurs, kira kira sparkles, and a mix of various color opacities to create that “dreamy” look</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/589349275335218/">
+                    </div>
+                </div>
+                <div class="item aesthetics">
+                    <img src="img/effect34.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">legofy</p>
+                            <p class="descr">modifies the entire camera view to look like everything is made out of lego pieces</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/469067607263278/?ch=OGZjMDg5NGM1OTA3ZDBmYzMwMGE4NTMxOTczODU1YmU%3D">
+                    </div>
+                </div>
+                <div class="item aesthetics">
+                    <img src="img/effect33.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">retro vhs</p>
+                            <p class="descr">recreates that old, retro, vhs tape look using gaussian blurs, sobel patches, and darker colored opacities</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/2666419453679985/?ch=ZjEyZGEzYzBiOTI4NWZkMTc5ZjAwNmMzYTRiNjk5MGI%3D">
+                    </div>
+                </div>
+                <div class="item aesthetics">
+                    <img src="img/effect32.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">pride gradients</p>
+                            <p class="descr">users can choose from 7 different gradients via the picker ui and modify the opacity of those gradients</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/2718278031750003/?ch=ZTY3Y2U3NGZmOTQ1NDJlMjZmM2QxM2RhOTVlM2MwOWI%3D">
+                    </div>
+                </div>
+                <div class="item aesthetics">
+                    <img src="img/effect31.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">pride frames</p>
+                            <p class="descr">users can choose from 7 different frames via the picker ui and modify the opacity of those frames</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/1748548828602816/?ch=YjRiYWY2NjgyMGEyZDNjOGI2MWUzZWVmMmQ0M2FjNzk%3D">
+                    </div>
+                </div>
+                <div class="item other">
+                    <img src="img/effect30.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">black lives matter</p>
+                            <p class="descr">users can show their support for blm by placing this sticker in front of their face or anywhere in the real world</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/381552886136870/?ch=ZWU3NTliYmY4NmUzN2E1MzY5MzhmMGI4MjBmNmM4NmI%3D">
+                    </div>
+                </div>
+                <div class="item aesthetics">
+                    <img src="img/effect29.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">pointillism</p>
+                            <p class="descr">modifies the entire camera view to emulate a pointillism painting</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/293511495000239/?ch=YzRkZjZiZGIwNGM0YzQ5NDVkNjAzMjAyOTQ2YjYyZDc%3D">
+                    </div>
+                </div>
+                <div class="item games">
+                    <img src="img/effect28.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">head beat</p>
+                            <p class="descr">users make a beat by moving their head and doing facial expressions to play specific sounds</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/1389950081213935/">
+                    </div>
+                </div>
+                <div class="item games">
+                    <img src="img/effect27.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">name 3</p>
+                            <p class="descr">users have 5 seconds to name 3 things that fit the generated topic</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/517693752446776/">
+                    </div>
+                </div>
+                <div class="item games">
+                    <img src="img/effect26.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">pronounce</p>
+                            <p class="descr">users tap the screen to receive a hard/controversial word to pronounce</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/517693752446776/">
+                    </div>
+                </div>
+                <div class="item aesthetics">
+                    <img src="img/effect25.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">color selector</p>
+                            <p class="descr">users can highlight a color of the color spectrum while leaving everything else gray</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/907829336309259/">
+                    </div>
+                </div>
+                <div class="item games">
+                    <img src="img/effect24.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">purity test</p>
+                            <p class="descr">users take a quarantine edition purity test by tilting their head to answer 15 prompts</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/2687219774935398/">
+                    </div>
+                </div>
+                <div class="item games">
+                    <img src="img/effect23.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">twist the tongue</p>
+                            <p class="descr">users get 5 seconds to try and say a tongue twister 3 times fast</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/272716847076047/">
+                    </div>
+                </div>
+                <div class="item randomizers">
+                    <img src="img/effect22.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">roast me</p>
+                            <p class="descr">users receive a randomly selected roast</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/568620854084599/">
+                    </div>
+                </div>
+                <div class="item games">
+                    <img src="img/effect21.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">catch the rolls</p>
+                            <p class="descr">users try to get the toilet paper roll to fit the outline perfectly by blinking to pause</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/245057336688617/">
+                    </div>
+                </div>
+                <div class="item games">
+                    <img src="img/effect20.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">guess the gibberish</p>
+                            <p class="descr">users must try to deciper the real phrase from the given gibberish</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/529967291024041/">
+                    </div>
+                </div>
+                <div class="item other">
+                    <img src="img/effect19.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">bubble wrap</p>
+                            <p class="descr">users can tap the circles to simulate the “popping” of bubble</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/250821922634835/">
+                    </div>
+                </div>
+                <div class="item randomizers">
+                    <img src="img/effect18.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">neonimals</p>
+                            <p class="descr">users receive a randomly selected neon animal 3d-poly mask</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/236141357506262/?ch=NDQxZWM3Mjc3NjVmYzEyODA4ZDUzY2VkMjE2NDc1NWE%3D">
+                    </div>
+                </div>
+                <div class="item randomizers">
+                    <img src="img/effect17.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">a song</p>
+                            <p class="descr">users must find a song on Instagram’s “music” sticker that fits the randomly selected prompt</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/953969038334346/">
+                    </div>
+                </div>
+                <div class="item other">
+                    <img src="img/effect16.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">censor</p>
+                            <p class="descr">users can emulate a “censor” by opening their mouth to activate the generic bleep pixelation and sound</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/601425753785875/?ch=ZDIwYTdhYzE0OTU2ZGFlMTFiYzRjN2ZiYmI4MTM4MmI%3D">
+                    </div>
+                </div>
+                <div class="item aesthetics">
+                    <img src="img/effect15.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">edgy</p>
+                            <p class="descr">creates a trippy effect by duplicating and off-centering outlines with neon colors</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/211081170161563/">
+                    </div>
+                </div>
+                <div class="item aesthetics">
+                    <img src="img/effect14.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">canon lutz</p>
+                            <p class="descr">users can choose from 10 different canon-inspired luts (aka, color grades) via the picker ui and tap to add dust/vintage textures</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/668290050669162/">
+                    </div>
+                </div>
+                <div class="item aesthetics">
+                    <img src="img/effect13.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">gopro lutz</p>
+                            <p class="descr">users can choose from 10 different gopro-inspired luts (aka, color grades) via the picker ui and tap to add dust/vintage textures</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/2454813278182367/">
+                    </div>
+                </div>
+                <div class="item aesthetics">
+                    <img src="img/effect12.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">fujifilm lutz</p>
+                            <p class="descr">users can choose from 10 different fujifilm-inspired luts (aka, color grades) via the picker ui and tap to add dust/vintage textures</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/211088830159308/">
+                    </div>
+                </div>
+                <div class="item other">
+                    <img src="img/effect11.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">zoomer</p>
+                            <p class="descr">users get placed in a zoom call with the famous pet memes</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/223498398893188/">
+                    </div>
+                </div>
+                <div class="item aesthetics">
+                    <img src="img/effect10.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">snow</p>
+                            <p class="descr">users are placed in realistic snowfall</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/895665704212104/">
+                    </div>
+                </div>
+                <div class="item aesthetics">
+                    <img src="img/effect9.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">color picker</p>
+                            <p class="descr">users tap the screen to change the entire camera texture to the color from the center grid square</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/145227050222528/?ch=YjJjYzk4NzAyZTIzNmFjODg5NDc3ZTRmYWE3MjhhZTU%3D">
+                    </div>
+                </div>
+                <div class="item aesthetics">
+                    <img src="img/effect8.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">blur shaper</p>
+                            <p class="descr">users can choose from 9 different blurring shapes via the picker ui</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/983369542079778/">
+                    </div>
+                </div>
+                <div class="item aesthetics">
+                    <img src="img/effect7.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">skin smoothing</p>
+                            <p class="descr">smoothes the skin of the users face</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/490743821631181/">
+                    </div>
+                </div>
+                <div class="item games">
+                    <img src="img/effect6.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">karaoke roulette</p>
+                            <p class="descr">users are prompted to sing the selected song on the spot</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/2510378692422359/">
+                    </div>
+                </div>
+                <div class="item games">
+                    <img src="img/effect5.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">smile score</p>
+                            <p class="descr">users are given a smile score based on their upper lip curvature, lower lip curvature, and mouth openness</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/481913822508982/">
+                    </div>
+                </div>
+                <div class="item games">
+                    <img src="img/effect4.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">never have i ever</p>
+                            <p class="descr">users tap the screen to reveal a “never have i ever” prompt (and also play a fart sound)</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/456882561889726/">
+                    </div>
+                </div>
+                <div class="item randomizers">
+                    <img src="img/effect3.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">your 2020 resolution</p>
+                            <p class="descr">users receive a randomly selected funny 2020 resolution</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/2402419390018330/">
+                    </div>
+                </div>
+                <div class="item randomizers">
+                    <img src="img/effect2.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">ur boba</p>
+                            <p class="descr">users receive a randomly selected boba flavor</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/3923611324330913/">
+                    </div>
+                </div>
+                <div class="item randomizers">
+                    <img src="img/effect1.png">
+                    <div class="overlay">
+                        <div class="text">
+                            <p class="title">which dog breed r u?</p>
+                            <p class="descr">users receive a randomly selected dog breed</p>
+                        </div>
+                        <img class="ig-logo" src="img/overlayig.png" data-link="https://www.instagram.com/ar/1594063190735852/">
+                    </div>
                 </div>
             </div>
         </div>
@@ -356,39 +604,9 @@
                         </div>
                     </div>
                 -->
-                <div class="large-box" data-link="https://news.mlh.io/talk-to-innovators-at-red-bull-canada-x-mlh-panel-10-05-2020">
-                    <div class="large-box-img">
-                        <img src="img/press35 pic.png">
-                    </div>
-                    <div class="large-box-text">
-                        <h2 class="title">Red Bull Basement X MLH Panel</h2>
-                        <h3 class="subtitle">Hackers who've turned their passions into more than a side project.</h3>
-                        <h4 class="extra-info">news.mlh.io</h4>
-                    </div>
-                </div>
-                <div class="large-box" data-link="https://www.umsystem.edu/stories/winners-chang-lin-tien-scholarships-announced">
-                    <div class="large-box-img">
-                        <img src="img/press34 pic.png">
-                    </div>
-                    <div class="large-box-text">
-                        <h2 class="title">Winners of Chang-Lin Tien Scholarships Announced</h2>
-                        <h3 class="subtitle">Fund to support exceptional, civic-minded students.</h3>
-                        <h4 class="extra-info">umsystem.edu</h4>
-                    </div>
-                </div>
-                <div class="large-box" data-link="https://www.therolladailynews.com/news/20200604/two-st-students-earn-donald-d-myers-scholarship">
-                    <div class="large-box-img">
-                        <img src="img/press33 pic.png">
-                    </div>
-                    <div class="large-box-text">
-                        <h2 class="title">Two S&amp;T students earn Donald D. Myers Scholarship</h2>
-                        <h3 class="subtitle">Christopher Gu, a senior in CS from Chesterfield, Missouri.</h3>
-                        <h4 class="extra-info">therolladailynews.com</h4>
-                    </div>
-                </div>
                 <div class="large-box" data-link="https://jypsyvloggin.com/how-to-get-how-do-you-pronounce-filter-on-instagram-by-gu_christopher/">
                     <div class="large-box-img">
-                        <img src="img/press32 pic.png">
+                        <img src="img/press22 pic.png">
                     </div>
                     <div class="large-box-text">
                         <h2 class="title">How to Get How Do you Pronounce Filter on Insta</h2>
@@ -398,7 +616,7 @@
                 </div>
                 <div class="large-box" data-link="https://celebpie.com/roast-me-filter-on-instagram-and-tiktok-explained-how-to-use-it/">
                     <div class="large-box-img">
-                        <img src="img/press31 pic.png">
+                        <img src="img/press21 pic.png">
                     </div>
                     <div class="large-box-text">
                         <h2 class="title">Roast Me filter on Instagram and TikTok Explained</h2>
@@ -408,7 +626,7 @@
                 </div>
                 <div class="large-box" data-link="https://lenslist.co/zoomer/">
                     <div class="large-box-img">
-                        <img src="img/press30 pic.png">
+                        <img src="img/press20 pic.png">
                     </div>
                     <div class="large-box-text">
                         <h2 class="title">Zoomer by gu_christopher</h2>
@@ -418,7 +636,7 @@
                 </div>
                 <div class="large-box" data-link="https://www.hitc.com/en-gb/2020/07/07/instagram-how-to-use-the-roast-me-filter-time-to-get-cynical/">
                     <div class="large-box-img">
-                        <img src="img/press29 pic.png">
+                        <img src="img/press19 pic.png">
                     </div>
                     <div class="large-box-text">
                         <h2 class="title">Instagram: How to Use the Roast Me Filter</h2>
@@ -428,7 +646,7 @@
                 </div>
                 <div class="large-box" data-link="https://tech.hindustantimes.com/tech/news/guess-the-gibberish-creator-on-hey-are-field-hers-story-nJoYY22egN2LgX6MdlWftL.html">
                     <div class="large-box-img">
-                        <img src="img/press28 pic.png">
+                        <img src="img/press18 pic.png">
                     </div>
                     <div class="large-box-text">
                         <h2 class="title">Instagram’s Guess the Gibberish creator</h2>
@@ -438,7 +656,7 @@
                 </div>
                 <div class="large-box" data-link="https://www.hitc.com/en-gb/2020/04/16/guess-the-gibberish-filter/">
                     <div class="large-box-img">
-                        <img src="img/press27 pic.png">
+                        <img src="img/press17 pic.png">
                     </div>
                     <div class="large-box-text">
                         <h2 class="title">How to Get the Guess the Gibberish Filter on Insta</h2>
@@ -448,7 +666,7 @@
                 </div>
                 <div class="large-box" data-link="https://www.india.com/viral/guess-the-gibberish-filter-has-everyone-hooked-creator-shares-story-behind-its-creation-4022821/">
                     <div class="large-box-img">
-                        <img src="img/press26 pic.png">
+                        <img src="img/press16 pic.png">
                     </div>
                     <div class="large-box-text">
                         <h2 class="title">Guess The Gibberish Filter Has Everyone Hooked</h2>
@@ -458,7 +676,7 @@
                 </div>
                 <div class="large-box" data-link="https://knowyourmeme.com/memes/guess-the-gibberish">
                     <div class="large-box-img">
-                        <img src="img/press25 pic.png">
+                        <img src="img/press15 pic.png">
                     </div>
                     <div class="large-box-text">
                         <h2 class="title">Guess The Gibberish</h2>
@@ -466,19 +684,9 @@
                         <h4 class="extra-info">knowyourmeme.com</h4>
                     </div>
                 </div>
-                <div class="large-box" data-link="https://www.youtube.com/watch?v=Amkm7E5jBvg">
-                    <div class="large-box-img">
-                        <img src="img/press24 pic.png">
-                    </div>
-                    <div class="large-box-text">
-                        <h2 class="title">Happy Hacking with Chris Gu!</h2>
-                        <h3 class="subtitle">We're going to sit down with Chris Gu, a hacker, organizer</h3>
-                        <h4 class="extra-info">youtube.com</h4>
-                    </div>
-                </div>
                 <div class="large-box" data-link="https://www.capitalfm.com/news/guess-the-gibberish-filter-instagram-tiktok/">
                     <div class="large-box-img">
-                        <img src="img/press23 pic.png">
+                        <img src="img/press14 pic.png">
                     </div>
                     <div class="large-box-text">
                         <h2 class="title">How To Get The Guess The Gibberish Filter</h2>
@@ -488,7 +696,7 @@
                 </div>
                 <div class="large-box" data-link="https://heavy.com/news/2020/04/guess-the-gibberish-instagram-filter/">
                     <div class="large-box-img">
-                        <img src="img/press22 pic.png">
+                        <img src="img/press13 pic.png">
                     </div>
                     <div class="large-box-text">
                         <h2 class="title">How to Get the Guess the Gibberish Instagram Filter</h2>
@@ -498,7 +706,7 @@
                 </div>
                 <div class="large-box" data-link="https://www.standard.co.uk/tech/tik-tok-instagram-filter-gibberish-challenge-a4418896.html">
                     <div class="large-box-img">
-                        <img src="img/press21 pic.png">
+                        <img src="img/press12 pic.png">
                     </div>
                     <div class="large-box-text">
                         <h2 class="title">What is the Gibberish Challenge?</h2>
@@ -508,7 +716,7 @@
                 </div>
                 <div class="large-box" data-link="https://www.gadgetsnow.com/how-to/guess-the-gibberish-challenge-how-to-get-and-use-this-instagram-filter/articleshow/75429441.cms">
                     <div class="large-box-img">
-                        <img src="img/press20 pic.png">
+                        <img src="img/press11 pic.png">
                     </div>
                     <div class="large-box-text">
                         <h2 class="title">People Are Sharing Their Hilarious Gibberish Fails</h2>
@@ -516,19 +724,9 @@
                         <h4 class="extra-info">junkee.com</h4>
                     </div>
                 </div>
-                <div class="large-box" data-link="https://www.indiatoday.in/information/story/instagram-guess-the-gibberish-challenge-how-to-use-this-filter-and-post-story-1672367-2020-04-29">
-                    <div class="large-box-img">
-                        <img src="img/press19 pic.png">
-                    </div>
-                    <div class="large-box-text">
-                        <h2 class="title">Instagram guess the Gibberish challenge</h2>
-                        <h3 class="subtitle">Latest challenge has gained huge popularity amid  lockdown.</h3>
-                        <h4 class="extra-info">indiatoday.in</h4>
-                    </div>
-                </div>
                 <div class="large-box" data-link="https://www.gadgetsnow.com/how-to/guess-the-gibberish-challenge-how-to-get-and-use-this-instagram-filter/articleshow/75429441.cms">
                     <div class="large-box-img">
-                        <img src="img/press18 pic.png">
+                        <img src="img/press10 pic.png">
                     </div>
                     <div class="large-box-text">
                         <h2 class="title">How to download and use Guess the Gibberish</h2>
@@ -536,9 +734,19 @@
                         <h4 class="extra-info">gadgetsnow.com</h4>
                     </div>
                 </div>
+                <div class="large-box" data-link="https://www.indiatoday.in/information/story/instagram-guess-the-gibberish-challenge-how-to-use-this-filter-and-post-story-1672367-2020-04-29">
+                    <div class="large-box-img">
+                        <img src="img/press9 pic.png">
+                    </div>
+                    <div class="large-box-text">
+                        <h2 class="title">Instagram guess the Gibberish challenge</h2>
+                        <h3 class="subtitle">Latest challenge has gained huge popularity amid  lockdown.</h3>
+                        <h4 class="extra-info">indiatoday.in</h4>
+                    </div>
+                </div>
                 <div class="large-box" data-link="https://www.popbuzz.com/internet/social-media/tiktok-gibberish-challenge-filter-instagram/">
                     <div class="large-box-img">
-                        <img src="img/press17 pic.png">
+                        <img src="img/press8 pic.png">
                     </div>
                     <div class="large-box-text">
                         <h2 class="title">How to do the Gibberish Challenge filter on TikTok</h2>
@@ -548,7 +756,7 @@
                 </div>
                 <div class="large-box" data-link="https://www.elitedaily.com/p/heres-how-to-get-instagrams-guess-the-gibberish-filter-to-start-decoding-22831226">
                     <div class="large-box-img">
-                        <img src="img/press16 pic.png">
+                        <img src="img/press7 pic.png">
                     </div>
                     <div class="large-box-text">
                         <h2 class="title">Here's How To Get Instagram's "Guess The Gibberish"</h2>
@@ -558,7 +766,7 @@
                 </div>
                 <div class="large-box" data-link="https://indianexpress.com/article/technology/tech-news-technology/guess-the-gibberish-what-is-gibberish-challenge-how-to-use-instagram-tiktok-filter-6379773/">
                     <div class="large-box-img">
-                        <img src="img/press15 pic.png">
+                        <img src="img/press6 pic.png">
                     </div>
                     <div class="large-box-text">
                         <h2 class="title">Gibberish challenge: How to use this Instagram filter</h2>
@@ -568,7 +776,7 @@
                 </div>
                 <div class="large-box" data-link="https://jypsyvloggin.com/instagram-filters-by-gu-christopher/">
                     <div class="large-box-img">
-                        <img src="img/press14 pic.png">
+                        <img src="img/press5 pic.png">
                     </div>
                     <div class="large-box-text">
                         <h2 class="title">Get your Hands on Popular Instagram FIlters</h2>
@@ -578,7 +786,7 @@
                 </div>
                 <div class="large-box" data-link="https://www.engadget.com/2020-02-03-which-pokemon-are-you-instagram-filters-explained.html">
                     <div class="large-box-img">
-                        <img src="img/press13 pic.png">
+                        <img src="img/press4 pic.png">
                     </div>
                     <div class="large-box-text">
                         <h2 class="title">Obsessed with Instagram’s ‘What are you?’ filters</h2>
@@ -588,7 +796,7 @@
                 </div>
                 <div class="large-box" data-link="https://sg.news.yahoo.com/2020-02-03-which-pokemon-are-you-instagram-filters-explained.html">
                     <div class="large-box-img">
-                        <img src="img/press12 pic.png">
+                        <img src="img/press3 pic.png">
                     </div>
                     <div class="large-box-text">
                         <h2 class="title">Obsessed with Instagram’s ‘What are you?’ filters</h2>
@@ -598,7 +806,7 @@
                 </div>
                 <div class="large-box" data-link="https://www.elitedaily.com/p/heres-how-to-get-the-which-dog-instagram-story-filter-to-match-with-a-pup-21736496">
                     <div class="large-box-img">
-                        <img src="img/press11 pic.png">
+                        <img src="img/press2 pic.png">
                     </div>
                     <div class="large-box-text">
                         <h2 class="title">Here's How To Get The "Which Dog" Instagram Filter</h2>
@@ -608,102 +816,12 @@
                 </div>
                 <div class="large-box" data-link="http://www.snapfont.com/which-dog-breed-are-you-instagram-filter/">
                     <div class="large-box-img">
-                        <img src="img/press10 pic.png">
+                        <img src="img/press1 pic.png">
                     </div>
                     <div class="large-box-text">
                         <h2 class="title">Which Dog Breed Are You Instagram Filter</h2>
                         <h3 class="subtitle">You are assigned a dog breed that represents you.</h3>
                         <h4 class="extra-info">snapfont.com</h4>
-                    </div>
-                </div>
-                <div class="large-box" data-link="https://econnection.mst.edu/2020/04/technology-fellowship-takes-student-to-in-israel/">
-                    <div class="large-box-img">
-                        <img src="img/press9 pic.png">
-                    </div>
-                    <div class="large-box-text">
-                        <h2 class="title">Technology fellowship takes student to Israel</h2>
-                        <h3 class="subtitle">Christopher Gu was selected for the TAVtech Fellowship.</h3>
-                        <h4 class="extra-info">econnection.mst.edu</h4>
-                    </div>
-                </div>
-                <div class="large-box" data-link="https://econnection.mst.edu/2020/03/st-student-named-top-hacker-forbes-under-30-scholar/">
-                    <div class="large-box-img">
-                        <img src="img/press8 pic.png">
-                    </div>
-                    <div class="large-box-text">
-                        <h2 class="title">S&T student named ‘Forbes Under 30’ scholar</h2>
-                        <h3 class="subtitle">Christopher Gu, a computer science student at S&T, was...</h3>
-                        <h4 class="extra-info">econnection.mst.edu</h4>
-                    </div>
-                </div>
-                <div class="large-box" data-link="https://top.mlh.io/2020/profiles/christopher-gu">
-                    <div class="large-box-img">
-                        <img src="img/press7 pic.png">
-                    </div>
-                    <div class="large-box-text">
-                        <h2 class="title">Christopher Gu | MLH’s Top 50 Hackers</h2>
-                        <h3 class="subtitle">Meet Christopher Gu - one of  MLH’s Top 50 Hackers of 2020!</h3>
-                        <h4 class="extra-info">top.mlh.io</h4>
-                    </div>
-                </div>
-                <div class="large-box" data-link="https://top.mlh.io/2020/profiles/the-pickhacks-team">
-                    <div class="large-box-img">
-                        <img src="img/press6 pic.png">
-                    </div>
-                    <div class="large-box-text">
-                        <h2 class="title">The PickHacks Team</h2>
-                        <h3 class="subtitle">Christopher and Luis are the co-founders of PickHacks.</h3>
-                        <h4 class="extra-info">top.mlh.io</h4>
-                    </div>
-                </div>
-                <div class="large-box" data-link="https://www.youtube.com/watch?v=wE_aFwbrVAA">
-                    <div class="large-box-img">
-                        <img src="img/press5 pic.png">
-                    </div>
-                    <div class="large-box-text">
-                        <h2 class="title">MLH Hackcon VII: How to Triple Hackathon Budget</h2>
-                        <h3 class="subtitle">Learn the strategies and tips I used to raise sponsorship</h3>
-                        <h4 class="extra-info">youtube.com</h4>
-                    </div>
-                </div>
-                <div class="large-box" data-link="https://www.therolladailynews.com/news/20190228/hundreds-of-students-head-to-missouri-st-for-hackathon-competition-today">
-                    <div class="large-box-img">
-                        <img src="img/press4 pic.png">
-                    </div>
-                    <div class="large-box-text">
-                        <h2 class="title">Hundreds of students head to S&T for PickHacks</h2>
-                        <h3 class="subtitle">PickHacks is what Gu call a 36-hour “invention marathon”.</h3>
-                        <h4 class="extra-info">therolladailynews.com</h4>
-                    </div>
-                </div>
-                <div class="large-box" data-link="https://news.mst.edu/2019/02/missouri-st-to-host-pickhacks-competition/">
-                    <div class="large-box-img">
-                        <img src="img/press3 pic.png">
-                    </div>
-                    <div class="large-box-text">
-                        <h2 class="title">Missouri S&T to host PickHacks competition</h2>
-                        <h3 class="subtitle">S&T students Gu and Ocampo are organizing the event.</h3>
-                        <h4 class="extra-info">news.mst.edu</h4>
-                    </div>
-                </div>
-                <div class="large-box" data-link="https://www.facebook.com/missourisandtcasb/photos/congratulations-to-students-luis-ocampo-christopher-gu-alec-mcdaniel-and-jamie-s/1326465597493621/">
-                    <div class="large-box-img">
-                        <img src="img/press2 pic.png">
-                    </div>
-                    <div class="large-box-text">
-                        <h2 class="title">Accenture U.S. Innovation Challenge</h2>
-                        <h3 class="subtitle">The S&T team won first place in the first round in Minneapolis!</h3>
-                        <h4 class="extra-info">facebook.com/missourisandtcasb</h4>
-                    </div>
-                </div>
-                <div class="large-box" data-link="https://www.yankodesign.com/2015/12/31/is-it-a-pin-is-it-a-clip/">
-                    <div class="large-box-img">
-                        <img src="img/press1 pic.png">
-                    </div>
-                    <div class="large-box-text">
-                        <h2 class="title">Is it a pin? Ist a clip?</h2>
-                        <h3 class="subtitle">The Easy-Pin is the awesome thumbtack you’re waiting for.</h3>
-                        <h4 class="extra-info">yankodesign.com</h4>
                     </div>
                 </div>
             </div>

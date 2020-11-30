@@ -1,3 +1,5 @@
+const galleyRotationInterval = 5; // In seconds
+
 function goToDataLink() {
     window.open($(this).data('link'), '_blank');
 }
@@ -22,6 +24,11 @@ function smoothScroll(e) {
     }
 }
 
+function advanceGallery() {
+    const nextWindow = ($('#about .about-content .gallery-buttons button.active').index() + 1) % 3;
+    $('#about .about-content .gallery-buttons').children().eq(nextWindow).click();
+}
+
 $(document).ready(() => {
     $('#portfolio .tabs a').each(function() {
         $(this).html($(this)[0].hash.substr(1));
@@ -41,6 +48,8 @@ $(document).ready(() => {
     }
 
     $('#portfolio .tabs a:first-child').click();
+
+    window.setInterval(advanceGallery, galleyRotationInterval * 1000);
 });
 
 $(window).resize(() => {

@@ -496,6 +496,10 @@ body {
 /* End About Page Center Page Box Specific Responsive Styles */
 
 /* Portfolio Page Center Page Box Specific Styles */
+#portfolio .portfolio-content {
+    width: 100%;
+}
+
 #portfolio .portfolio-content > p {
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     border-radius: 5px;
@@ -570,6 +574,7 @@ body {
     border-radius: 5px;
     padding: 30px;
     margin-bottom: 25px;
+    overflow-x: auto;
 }
 
 #portfolio .portfolio-content .filter-highlight .filter-header {
@@ -584,9 +589,8 @@ body {
 #portfolio .portfolio-content .filter-highlight .highlight-gallery {
     display: flex;
     justify-content: space-between;
-}
-
-#portfolio .portfolio-content .filter-highlight .highlight-gallery .gallery-item {
+    overflow-x: auto;
+    width: 540px;
 }
 
 #portfolio .portfolio-content .filter-highlight .highlight-gallery .gallery-item,

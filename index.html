@@ -606,12 +606,12 @@
         <div id="contact" class="center-page-box">
             <h2 class="title-text">want an ar effect?</h2>
             <h6 class="subtitle-text" style="max-width: none;"><span style="font-weight: 900;">submit an inquiry and get a quote!</span> we look forward to working with you!</h6>
-            <form>
-                <input name="name" placeholder="your name" />
-                <input name="email" type="email" placeholder="your email" />
-                <input name="company" placeholder="your brand/company" />
-                <textarea name="idea" placeholder="your idea"></textarea>
-                <button>get a quote</button>
+            <form method="POST" action="https://formspree.io/f/xgeplpov">
+                <input id="name-input" name="name" placeholder="your name" />
+                <input id="email-input" name="email" type="email" placeholder="your email" />
+                <input id="company-input" name="company" placeholder="your brand/company" />
+                <textarea id="idea-input" name="idea" placeholder="your idea"></textarea>
+                <button id="submit">get a quote</button>
             </form>
         </div>
 

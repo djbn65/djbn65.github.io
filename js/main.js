@@ -115,6 +115,24 @@ $('#portfolio a').click(function(e) {
     });
 });
 
+$('#contact form #submit').click(function(e) {
+    e.preventDefault();
+
+    $.ajax({
+        url: 'https://formspree.io/f/xgeplpov',
+        type: 'POST',
+        data: {
+            Name: $('#name-input').val(),
+            Email: $('#email-input').val(),
+            Company: $('#company-input').val(),
+            Idea: $('#idea-input').val()
+        },
+        success: function(msg) {
+            alert('Email sent');
+        }
+    });
+});
+
 $('#press .press-grid .large-box').click(goToDataLink);
 $('#portfolio .portfolio-grid .item .ig-logo').click(goToDataLink);
 $('#clients .client-gallery img').click(goToDataLink);

@@ -121,14 +121,19 @@ $('#contact form #submit').click(function(e) {
     $.ajax({
         url: 'https://formspree.io/f/xgeplpov',
         type: 'POST',
+        dataType: "json",
         data: {
             Name: $('#name-input').val(),
             Email: $('#email-input').val(),
             Company: $('#company-input').val(),
             Idea: $('#idea-input').val()
         },
-        success: function(msg) {
-            alert('Email sent');
+        success: function() {
+            $('#contact-form').trigger('reset');
+            alert('Submitted successfully');
+        },
+        error: function() {
+            alert('Submission Error');
         }
     });
 });

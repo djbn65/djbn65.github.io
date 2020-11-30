@@ -495,6 +495,167 @@ body {
 
 /* End About Page Center Page Box Specific Responsive Styles */
 
+/* Portfolio Page Center Page Box Specific Styles */
+#portfolio .portfolio-content > p {
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 15px;
+    margin-bottom: 25px;
+}
+
+#portfolio .portfolio-content > p span {
+    color: var(--site-accent-color);
+    font-style: italic;
+    font-weight: 900;
+}
+
+#portfolio .portfolio-content .stats {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#portfolio .portfolio-content .stats .sub-box {
+    display: flex;
+    width: 50%;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 5px 20px;
+}
+
+#portfolio .portfolio-content .stats .sub-box p {
+    margin: 0;
+}
+
+#portfolio .portfolio-content .stats .sub-box#ig-effects {
+    margin-right: 30px;
+}
+
+#portfolio .portfolio-content .stats .sub-box#ig-effects .large-text {
+    font-size: 64px;
+    font-weight: 900;
+    color: var(--site-accent-color);
+    margin: auto 0;
+}
+
+#portfolio .portfolio-content .stats .sub-box#ig-effects .sub-text {
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 24px;
+    margin: auto 0 auto 20px;
+}
+
+#portfolio .portfolio-content .stats .sub-box#impressions {
+    flex-direction: column;
+}
+
+#portfolio .portfolio-content .stats .sub-box#impressions .large-text {
+    font-weight: 900;
+    font-size: 48px;
+    color: #4F5BD5;
+    line-height: 41px;
+    margin-top: auto;
+}
+
+#portfolio .portfolio-content .stats .sub-box#impressions .sub-text {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: auto;
+}
+
+#portfolio .portfolio-content .filter-highlight {
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 30px;
+    margin-bottom: 25px;
+}
+
+#portfolio .portfolio-content .filter-highlight .filter-header {
+    font-weight: 900;
+    font-size: 24px;
+}
+
+#portfolio .portfolio-content .filter-highlight .filter-header span {
+    color: var(--site-accent-color);
+}
+
+#portfolio .portfolio-content .filter-highlight .highlight-gallery {
+    display: flex;
+    justify-content: space-between;
+}
+
+#portfolio .portfolio-content .filter-highlight .highlight-gallery .gallery-item {
+}
+
+#portfolio .portfolio-content .filter-highlight .highlight-gallery .gallery-item,
+#portfolio .portfolio-content .filter-highlight .highlight-gallery .gallery-item img {
+    max-width: 150px;
+}
+
+#portfolio .portfolio-content .filter-highlight .highlight-gallery .gallery-item p {
+    margin: 0;
+    text-align: center;
+}
+
+#portfolio .portfolio-content .filter-highlight .highlight-gallery .gallery-item .tw-handle {
+    font-weight: 500;
+    font-size: 12px;
+    margin-top: 5px;
+    display: flex;
+}
+
+#portfolio .portfolio-content .filter-highlight .highlight-gallery .gallery-item .tw-handle span {
+    margin-left: auto;
+    margin-right: 3px;
+}
+
+#portfolio .portfolio-content .filter-highlight .highlight-gallery .gallery-item .tw-handle img {
+    margin: auto auto auto 0;
+}
+
+#portfolio .portfolio-content .filter-highlight .highlight-gallery .gallery-item .follower-count {
+    font-size: 9px;
+    font-style: italic;
+}
+
+/* End Portfolio Page Center Page Box Specific Styles */
+
+/* Portfolio Page Center Page Box Specific Responsive Styles */
+
+@media (max-width: 793px) {
+    #portfolio .portfolio-content .stats {
+        flex-direction: column;
+    }
+
+    #portfolio .portfolio-content .stats .sub-box {
+        width: 100%;
+        height: 96px;
+        margin-bottom: 25px;
+    }
+
+    #portfolio .portfolio-content .stats .sub-box#ig-effects {
+        flex-direction: column;
+    }
+
+    #portfolio .portfolio-content .stats .sub-box#ig-effects .large-text {
+        font-size: 48px;
+        line-height: 41px;
+    }
+
+    #portfolio .portfolio-content .stats .sub-box#ig-effects .large-text,
+    #portfolio .portfolio-content .stats .sub-box#ig-effects .sub-text,
+    #portfolio .portfolio-content .stats .sub-box#impressions .large-text,
+    #portfolio .portfolio-content .stats .sub-box#impressions .sub-text {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+}
+
+/* End Portfolio Page Center Page Box Specific Responsive Styles */
+
 /* Client Page Center Page Box Specific Styles */
 #clients .client-gallery {
     display: flex;
@@ -657,7 +818,7 @@ body {
 /* End Services Page Center Page Box Specific Responsive Styles */
 
 /* Portfolio Page Center Page Box Specific Styles */
-#portfolio .tabs {
+/* #portfolio .tabs {
     margin-top: -41px;
     margin-bottom: 16px;
     display: flex;
@@ -762,7 +923,7 @@ body {
 
 #portfolio .portfolio-grid .item img {
     width: 100%;
-}
+} */
 
 /*filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.5));*/
 

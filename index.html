@@ -36,8 +36,8 @@
         <!-- Main Site Styling -->
         <link rel="stylesheet" href="css/style.css">
     </head>
-    <body>
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+    <body data-spy="scroll" data-target="#main-nav" data-offset="200">
+        <nav id="main-nav" class="navbar fixed-top navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="#home">cg/ar</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -86,6 +86,100 @@
                     <img src="img/gallery 9.png" />
                 </div>
                 <div class="gallery-buttons"></div>
+            </div>
+        </div>
+
+        <div id="portfolio" class="center-page-box">
+            <h2 class="title-text">portfolio</h2>
+            <div class="portfolio-content">
+                <p>
+                    my specialty of creating <span>simple</span>, <span>viral</span>, and <span>interactive</span> ar filters has catapulted me to become one of the <span>top ar creators</span> on instagram
+                </p>
+                <div class="stats">
+                    <div id="ig-effects" class="sub-box">
+                        <p class="large-text">40+</p>
+                        <p class="sub-text">instagram effects created</p>
+                    </div>
+                    <div id="impressions" class="sub-box">
+                        <p class="large-text">5.2+ billion</p>
+                        <p class="sub-text">impressions ("views")</p>
+                    </div>
+                </div>
+                <div class="filter-highlight">
+                    <h2 class="filter-header">
+                        <span>48 million</span> impressions
+                    </h2>
+                    <div class="highlight-gallery">
+                        <div class="gallery-item">
+                            <img src="img/headbeat.png" />
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/doodieclark.png" />
+                            <p class="tw-handle"><span>dodie clark</span><img src="img/tw-verified.png" /></p>
+                            <p class="follower-count">1.1m followers</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/scotthoying.png" />
+                            <p class="tw-handle"><span>scott hoying</span><img src="img/tw-verified.png" /></p>
+                            <p class="follower-count">1m followers</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/blackbear.png" />
+                            <p class="tw-handle"><span>blackbear</span><img src="img/tw-verified.png" /></p>
+                            <p class="follower-count">3.2m followers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-highlight">
+                    <h2 class="filter-header">
+                        <span>52 million</span> impressions
+                    </h2>
+                    <div class="highlight-gallery">
+                        <div class="gallery-item">
+                            <img src="img/twistthetongue.png" />
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/vanessahudgens.png" />
+                            <p class="tw-handle"><span>vanessa hudgens</span><img src="img/tw-verified.png" /></p>
+                            <p class="follower-count">39.7m followers</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/joejonas.png" />
+                            <p class="tw-handle"><span>joe jonas</span><img src="img/tw-verified.png" /></p>
+                            <p class="follower-count">12.9m followers</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/arielmartin.png" />
+                            <p class="tw-handle"><span>ariel martin</span><img src="img/tw-verified.png" /></p>
+                            <p class="follower-count">9.7m followers</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-highlight">
+                    <h2 class="filter-header">
+                        <span>3.8 billion</span> impressions
+                    </h2>
+                    <div class="highlight-gallery">
+                        <div class="gallery-item">
+                            <img src="img/guessthegibberish.png" />
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/dixiedamelio.png" />
+                            <p class="tw-handle"><span>dixie d'amelio</span><img src="img/tw-verified.png" /></p>
+                            <p class="follower-count">21.3m followers</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/chancetherapper.png" />
+                            <p class="tw-handle"><span>chance the rapper</span><img src="img/tw-verified.png" /></p>
+                            <p class="follower-count">12.4m followers</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/lizakoshy.png" />
+                            <p class="tw-handle"><span>liza koshy</span><img src="img/tw-verified.png" /></p>
+                            <p class="follower-count">18.8m followers</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -606,7 +700,7 @@
         <div id="contact" class="center-page-box">
             <h2 class="title-text">want an ar effect?</h2>
             <h6 class="subtitle-text" style="max-width: none;"><span style="font-weight: 900;">submit an inquiry and get a quote!</span> we look forward to working with you!</h6>
-            <form method="POST" action="https://formspree.io/f/xgeplpov">
+            <form id="contact-form">
                 <input id="name-input" name="name" placeholder="your name" />
                 <input id="email-input" name="email" type="email" placeholder="your email" />
                 <input id="company-input" name="company" placeholder="your brand/company" />

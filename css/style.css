@@ -11,6 +11,7 @@
     
     /* Navbar and document left/right/bottom padding */
     --uniform-padding: 50;
+    --uniform-mobile-padding: 30;
     --navbar-total-height: calc(var(--uniform-padding) * 2 + 40);
 
     /* Homepage constants */
@@ -42,6 +43,7 @@ body {
     font-size: 24px;
     font-weight: 900;
     color: initial;
+    text-align: center;
 }
 
 .subtitle-text {
@@ -241,6 +243,10 @@ body {
     .navbar-nav {
         text-align: center;
     }
+
+    .navbar {
+        padding: calc(var(--uniform-mobile-padding) * 1px);
+    }
 }
 
 /* End Navbar Responsive Styles */
@@ -279,6 +285,15 @@ body {
 }
 
 /* End Center Page Box Styles */
+
+/* Center Page Box Resonsive Styles */
+@media (max-width: 991px) {
+    .center-page-box {
+        width: calc(100% - var(--uniform-mobile-padding) * 2px);
+    }
+}
+
+/* End Center Page Box Responsive Styles */
 
 /* Home Page Center Page Box Specific Styles */
 #home {
@@ -574,7 +589,6 @@ body {
     border-radius: 5px;
     padding: 30px;
     margin-bottom: 25px;
-    overflow-x: auto;
 }
 
 #portfolio .portfolio-content .filter-highlight .filter-header {
@@ -590,7 +604,7 @@ body {
     display: flex;
     justify-content: space-between;
     overflow-x: auto;
-    width: 540px;
+    width: 100%;
 }
 
 #portfolio .portfolio-content .filter-highlight .highlight-gallery .gallery-item,
@@ -627,6 +641,15 @@ body {
 /* End Portfolio Page Center Page Box Specific Styles */
 
 /* Portfolio Page Center Page Box Specific Responsive Styles */
+@media (max-width: 799px) {
+    #portfolio .portfolio-content .filter-highlight .highlight-gallery {
+        justify-content: flex-start;
+    }
+
+    #portfolio .portfolio-content .filter-highlight .highlight-gallery .gallery-item:nth-child(n + 2) {
+        margin-left: 20px;
+    }
+}
 
 @media (max-width: 793px) {
     #portfolio .portfolio-content .stats {
@@ -658,6 +681,69 @@ body {
     }
 }
 
+@media (max-width: 519px) {
+    #portfolio .portfolio-content .stats .sub-box {
+        height: auto;
+    }
+
+    #portfolio .portfolio-content .stats .sub-box .large-text {
+        font-size: 36px !important;
+        margin-top: auto !important;
+        margin-bottom: 0 !important;
+    }
+
+    #portfolio .portfolio-content .stats .sub-box .sub-text {
+        font-size: 16px !important;
+        margin-bottom: auto !important;
+        margin-top: 0 !important;
+    }
+
+    #portfolio .portfolio-content .filter-highlight .filter-header {
+        text-align: center;
+    }
+
+    #portfolio .portfolio-content .filter-highlight .highlight-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #portfolio .portfolio-content .filter-highlight .highlight-gallery .gallery-item {
+        margin-left: 0 !important;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 365px) {
+    #portfolio .portfolio-content .filter-highlight .highlight-gallery .gallery-item:first-child,
+    #portfolio .portfolio-content .filter-highlight .highlight-gallery .gallery-item img {
+        max-width: 100%;
+    }
+
+    #portfolio .portfolio-content .filter-highlight .highlight-gallery .gallery-item {
+        max-width: 77%;
+    }
+
+    #portfolio .portfolio-content .filter-highlight .filter-header {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 341px) {
+    #portfolio .portfolio-content .stats .sub-box .large-text {
+        font-size: 30px !important;
+    }
+
+    #portfolio .portfolio-content .stats .sub-box .sub-text {
+        font-size: 14px !important;
+    }
+}
+
+@media (max-width: 329px) {
+    #portfolio .portfolio-content .filter-highlight .filter-header {
+        font-size: 18px;
+    }
+}
+
 /* End Portfolio Page Center Page Box Specific Responsive Styles */
 
 /* Client Page Center Page Box Specific Styles */
@@ -682,7 +768,7 @@ body {
 /* End Client Page Center Page Box Specific Styles */
 
 /* Client Page Center Page Box Specific Responsive Styles */
-@media(max-width: 649px) {
+@media (max-width: 649px) {
     #clients .client-gallery {
         display: flex;
         flex-wrap: wrap;
@@ -1018,5 +1104,11 @@ body {
 /* End Social Media Page Center Page Box Specific Styles */
 
 /* Social Media Page Center Page Box Specific Responsive Styles */
+
+@media (max-width: 337px) {
+    #social .icons {
+        display: flex;
+    }
+}
 
 /* End Social Media Page Center Page Box Specific Responsive Styles */

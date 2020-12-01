@@ -1015,14 +1015,11 @@ body {
 }
 
 #press .press-grid {
-    display: flex;
-    flex-direction: column;
     width: 100%;
-    align-items: center;
 }
 
 #press .press-grid .large-box {
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
 }
 
 #press .press-grid .large-box {

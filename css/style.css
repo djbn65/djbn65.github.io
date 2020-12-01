@@ -443,6 +443,7 @@ body {
 
 #about .about-content .about-gallery {
     display: flex;
+    align-items: flex-start;
     position: relative;
     overflow: hidden;
 }

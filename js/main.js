@@ -180,7 +180,7 @@ $('#contact form #submit').click(function(e) {
     e.preventDefault();
 
     $.ajax({
-        url: 'https://formspree.io/f/xgeplpov',
+        url: 'https://formspree.io/f/mbjpapda',
         type: 'POST',
         dataType: "json",
         data: {
@@ -191,10 +191,22 @@ $('#contact form #submit').click(function(e) {
         },
         success: function() {
             $('#contact-form').trigger('reset');
-            alert('Submitted successfully');
+            $('.form-popup').addClass('active');
+            $('.form-popup .popup.failed').css('display', 'none');
+            $('.form-popup .popup.confirm').css('display', 'flex');
+
+            window.setTimeout(function() {
+                $('.form-popup').removeClass('active');
+            }, 3000);
         },
         error: function() {
-            alert('Submission Error');
+            $('.form-popup').addClass('active');
+            $('.form-popup .popup.failed').css('display', 'flex');
+            $('.form-popup .popup.confirm').css('display', 'none');
+
+            window.setTimeout(function() {
+                $('.form-popup').removeClass('active');
+            }, 3000);
         }
     });
 });

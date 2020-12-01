@@ -13,21 +13,6 @@
     --uniform-padding: 50;
     --uniform-mobile-padding: 30;
     --navbar-total-height: calc(var(--uniform-padding) * 2 + 40);
-
-    /* Homepage constants */
-    --me-img-pct-height: 37.5%;
-    --name-text-pct-font-size: 17.1429%;
-    --social-pct-height: 6.25%;
-
-    /* Education page constants */
-    --extracurriculars-grid-pct-height: 47.5%;
-
-    /* Experience page constants */
-    --experiences-grid-pct-height: 85%;
-    
-    /* Info box constants */
-    --large-rectangular-box-pct-height: 25%;
-    --small-rectangular-box-pct-height: 12.5%;
 }
 
 body {
@@ -1033,7 +1018,6 @@ body {
 #press .press-grid {
     display: flex;
     flex-direction: column;
-    height: var(--experiences-grid-pct-height);
     width: 100%;
     align-items: center;
 }

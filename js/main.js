@@ -26,7 +26,7 @@ function smoothScroll(e) {
 }
 
 function advanceGallery() {
-    const nextWindow = ($('#about .about-content .gallery-buttons button.active').index() + 1) % 3;
+    const nextWindow = ($('#about .about-content .gallery-buttons button.active').index() + 1) % $('#about .about-content .gallery-buttons button').length;
     $('#about .about-content .gallery-buttons').children().eq(nextWindow).click();
 }
 
@@ -59,7 +59,7 @@ $(document).ready(() => {
 
     $('#portfolio .tabs a:first-child').click();
 
-    // window.setInterval(advanceGallery, galleyRotationInterval * 1000);
+    window.setInterval(advanceGallery, galleyRotationInterval * 1000);
 });
 
 $(window).resize(() => {

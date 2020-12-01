@@ -463,33 +463,17 @@ body {
 }
 
 #about .about-content .gallery-buttons {
-    margin-top: 15px;
+    margin-top: 25px;
     text-align: center;
 }
 
 #about .about-content .gallery-buttons button,
 #about .about-content .gallery-buttons button:focus {
-    min-width: 15px;
-    min-height: 15px;
-    width: 15px;
-    height: 15px;
-    margin: 0 5px;
-    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 50%;
     border: none;
     background: transparent;
     outline: none;
-    margin-bottom: 10px;
+    margin: 0 20px;
     transition: all 0.1s linear;
-}
-
-#about .about-content .gallery-buttons button.active {
-    background: #4551CB;
-}
-
-#about .about-content .gallery-buttons button:hover {
-    background: #4551CB;
-    opacity: 0.5;
 }
 
 /* End About Page Center Page Box Specific Styles */

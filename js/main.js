@@ -1,5 +1,7 @@
 const galleyRotationInterval = 5; // In seconds
 var numImagesPerAboutGalleryFrame = 3;
+var rotationHandle;
+var currentWindow = 0;
 
 function goToDataLink() {
     window.open($(this).data('link'), '_blank');
@@ -26,8 +28,10 @@ function smoothScroll(e) {
 }
 
 function advanceGallery() {
-    const nextWindow = ($('#about .about-content .gallery-buttons button.active').index() + 1) % $('#about .about-content .gallery-buttons button').length;
-    $('#about .about-content .gallery-buttons').children().eq(nextWindow).click();
+    currentWindow = (currentWindow + 1) % Math.ceil($('#about .about-gallery img').length / numImagesPerAboutGalleryFrame);
+
+    $('#about .gallery-buttons button').removeClass('active');
+    $('#about .about-gallery img:first-child').css('margin-left', -103.5 * currentWindow + "%");
 }
 
 $(document).ready(() => {
@@ -48,18 +52,18 @@ $(document).ready(() => {
         numImagesPerAboutGalleryFrame = 3;
     }
 
-    const numImages = Math.ceil($('#about .about-content .about-gallery img').length / numImagesPerAboutGalleryFrame);
+    // const numImages = Math.ceil($('#about .about-content .about-gallery img').length / numImagesPerAboutGalleryFrame);
 
-    for(i = 0; i < numImages; ++i) {
-        var newButton = $('<button />');
-        if (i === 0) newButton.addClass('active');
+    // for(i = 0; i < numImages; ++i) {
+    //     var newButton = $('<button />');
+    //     if (i === 0) newButton.addClass('active');
 
-        $('#about .about-content .gallery-buttons').append(newButton);
-    }
+    //     $('#about .about-content .gallery-buttons').append(newButton);
+    // }
 
     $('#portfolio .tabs a:first-child').click();
 
-    window.setInterval(advanceGallery, galleyRotationInterval * 1000);
+    rotationHandle = window.setInterval(advanceGallery, galleyRotationInterval * 1000);
 });
 
 $(window).resize(() => {
@@ -82,27 +86,33 @@ $(window).resize(() => {
         numImagesPerAboutGalleryFrame = 3;
     }
 
-    if($('#about .about-content .gallery-buttons button').length !== Math.ceil($('#about .about-content .about-gallery img').length / numImagesPerAboutGalleryFrame)) {
-        const numNewButtons = Math.ceil($('#about .about-content .about-gallery img').length / numImagesPerAboutGalleryFrame) - $('#about .about-content .gallery-buttons button').length;
-        
-        if(numNewButtons < 0) {
-            console.log($('#about .about-content .gallery-buttons button.active').index() + 1);
-            console.log(Math.ceil($('#about .about-content .about-gallery img').length / numImagesPerAboutGalleryFrame));
-            if($('#about .about-content .gallery-buttons button.active').index() + 1 > Math.ceil($('#about .about-content .about-gallery img').length / numImagesPerAboutGalleryFrame)) {
-                $('#about .about-content .gallery-buttons').children().eq(Math.ceil($('#about .about-content .about-gallery img').length / numImagesPerAboutGalleryFrame) - 1).click();
-            }
-
-            for(i = 0; i < -numNewButtons; ++i) {
-                $('#about .about-content .gallery-buttons').children().last().remove();
-            }
-        } else {
-            for(i = 0; i < numNewButtons; ++i) {
-                var newButton = $('<button />');
-    
-                $('#about .about-content .gallery-buttons').append(newButton);
-            }
-        }
+    if(currentWindow >= Math.ceil($('#about .about-gallery img').length / numImagesPerAboutGalleryFrame)) {
+        currentWindow = Math.ceil($('#about .about-gallery img').length / numImagesPerAboutGalleryFrame) - 1;
     }
+    
+    $('#about .about-gallery img:first-child').css('margin-left', -103.5 * currentWindow + "%");
+
+    // if($('#about .about-content .gallery-buttons button').length !== Math.ceil($('#about .about-content .about-gallery img').length / numImagesPerAboutGalleryFrame)) {
+    //     const numNewButtons = Math.ceil($('#about .about-content .about-gallery img').length / numImagesPerAboutGalleryFrame) - $('#about .about-content .gallery-buttons button').length;
+        
+    //     if(numNewButtons < 0) {
+    //         console.log($('#about .about-content .gallery-buttons button.active').index() + 1);
+    //         console.log(Math.ceil($('#about .about-content .about-gallery img').length / numImagesPerAboutGalleryFrame));
+    //         if($('#about .about-content .gallery-buttons button.active').index() + 1 > Math.ceil($('#about .about-content .about-gallery img').length / numImagesPerAboutGalleryFrame)) {
+    //             $('#about .about-content .gallery-buttons').children().eq(Math.ceil($('#about .about-content .about-gallery img').length / numImagesPerAboutGalleryFrame) - 1).click();
+    //         }
+
+    //         for(i = 0; i < -numNewButtons; ++i) {
+    //             $('#about .about-content .gallery-buttons').children().last().remove();
+    //         }
+    //     } else {
+    //         for(i = 0; i < numNewButtons; ++i) {
+    //             var newButton = $('<button />');
+    
+    //             $('#about .about-content .gallery-buttons').append(newButton);
+    //         }
+    //     }
+    // }
 });
 
 $('.navbar-collapse').on('show.bs.collapse', () => {
@@ -129,13 +139,23 @@ $('.navbar-brand').click(() => {
 $('.navbar a').click(smoothScroll);
 $('#home .home-button-grid a').click(smoothScroll);
 
-$('#about .gallery-buttons').on('click', 'button', function() {
-    if($(this).hasClass('active') === false) {
-        $('#about .gallery-buttons button').removeClass('active');
-        $(this).addClass('active');
+$('#about .gallery-buttons .next').click(function() {
+    currentWindow = (currentWindow + 1) % Math.ceil($('#about .about-gallery img').length / numImagesPerAboutGalleryFrame);
 
-        $('#about .about-gallery img:first-child').css('margin-left', -103.5 * $(this).index() + "%");
-    }
+    $('#about .about-gallery img:first-child').css('margin-left', -103.5 * currentWindow + "%");
+
+    window.clearInterval(rotationHandle);
+    rotationHandle = window.setInterval(advanceGallery, galleyRotationInterval * 1000);
+});
+
+$('#about .gallery-buttons .prev').click(function() {
+    currentWindow--;
+    if(currentWindow < 0) currentWindow = Math.ceil($('#about .about-gallery img').length / numImagesPerAboutGalleryFrame) - 1;
+
+    $('#about .about-gallery img:first-child').css('margin-left', -103.5 * currentWindow + "%");
+
+    window.clearInterval(rotationHandle);
+    rotationHandle = window.setInterval(advanceGallery, galleyRotationInterval * 1000);
 });
 
 $('#portfolio a').click(function(e) {

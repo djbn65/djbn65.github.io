@@ -462,6 +462,7 @@ body {
 
 #about .about-content .gallery-buttons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin-top: 15px;
 }
@@ -476,6 +477,7 @@ body {
     border: none;
     background: transparent;
     outline: none;
+    margin-bottom: 10px;
     transition: all 0.1s linear;
 }
 
@@ -491,6 +493,17 @@ body {
 /* End About Page Center Page Box Specific Styles */
 
 /* About Page Center Page Box Specific Responsive Styles */
+@media (max-width: 519px) {
+    #about .about-content .about-gallery img {
+        width: 48.25%;
+    }
+}
+
+@media (max-width: 449px) {
+    #about .about-content .about-gallery img {
+        width: 100%;
+    }
+}
 
 /* End About Page Center Page Box Specific Responsive Styles */
 
@@ -591,9 +604,22 @@ body {
     width: 100%;
 }
 
-#portfolio .portfolio-content .filter-highlight .highlight-gallery .gallery-item,
-#portfolio .portfolio-content .filter-highlight .highlight-gallery .gallery-item img {
+#portfolio .portfolio-content .filter-highlight .highlight-gallery .gallery-item {
     max-width: 150px;
+}
+
+#portfolio .portfolio-content .filter-highlight .highlight-gallery .gallery-item > img {
+    width: 100%;
+}
+
+#portfolio .portfolio-content .filter-highlight .highlight-gallery .gallery-item {
+    width: 112px;
+    min-width: 112px;
+}
+
+#portfolio .portfolio-content .filter-highlight .highlight-gallery .gallery-item:first-child {
+    width: 144.9px;
+    min-width: 144.9px;
 }
 
 #portfolio .portfolio-content .filter-highlight .highlight-gallery .gallery-item p {

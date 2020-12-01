@@ -464,6 +464,7 @@ body {
 
 #about .about-content .gallery-buttons {
     display: flex;
+    align-items: flex-start;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 15px;

@@ -449,6 +449,7 @@ body {
 
 #about .about-content .about-gallery img {
     width: 31%;
+    height: auto;
     transition: all 0.2s linear;
 }
 

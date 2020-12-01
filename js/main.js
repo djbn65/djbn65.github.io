@@ -212,5 +212,5 @@ $('#contact form #submit').click(function(e) {
 });
 
 $('#press .press-grid .large-box').click(goToDataLink);
-$('#portfolio .portfolio-grid .item .ig-logo').click(goToDataLink);
+$('#portfolio .portfolio-content .filter-highlight').click(goToDataLink);
 $('#clients .client-gallery img').click(goToDataLink);

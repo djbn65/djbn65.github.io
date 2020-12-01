@@ -648,6 +648,12 @@ body {
     border-radius: 5px;
     padding: 30px;
     margin-bottom: 25px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+#portfolio .portfolio-content .filter-highlight:hover {
+    transform: scale(1.015);
 }
 
 #portfolio .portfolio-content .filter-highlight .filter-header {

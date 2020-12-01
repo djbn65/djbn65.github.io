@@ -469,6 +469,8 @@ body {
 
 #about .about-content .gallery-buttons button,
 #about .about-content .gallery-buttons button:focus {
+    min-width: 15px;
+    min-height: 15px;
     width: 15px;
     height: 15px;
     margin: 0 5px;

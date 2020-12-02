@@ -285,6 +285,25 @@ body {
     transition: all 0.2s linear;
 }
 
+.navbar-nav .nav-item.quote-button {
+    margin: auto;
+}
+
+.navbar-nav .nav-item.quote-button .nav-link {
+    padding: 2px 15px;
+    color: white !important;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    background: var(--site-accent-color);
+    transition: all 0.2s linear;
+}
+
+.navbar-nav .nav-item .quote-button .nav-link:hover {
+    opacity: 0.8;
+}
+
 .navbar-nav .nav-item .nav-link.active,
 .navbar-nav .nav-item .nav-link:hover {
     color: var(--site-accent-color) !important;
@@ -384,16 +403,12 @@ body {
 }
 
 @media (max-width: 613px) {
-    .center-page-box > .title-text {
-        flex-direction: column;
-    }
-
     .center-page-box > .title-text > * {
         width: 100%;
     }
 
     .center-page-box > .title-text a {
-        margin: 30px auto 0 auto;
+        display: none;
     }
 }
 
@@ -760,6 +775,29 @@ body {
     font-style: italic;
 }
 
+#portfolio .portfolio-content .full-portfolio-button {
+    display: flex;
+    width: 100%;
+}
+
+#portfolio .portfolio-content .full-portfolio-button a {
+    padding: 7px 20px;
+    display: none;
+    color: white;
+    border-radius: 5px;
+    font-weight: 900;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: var(--site-accent-color);
+    margin: auto;
+    border: none;
+    transition: all 0.2s linear;
+}
+
+#portfolio .portfolio-content .full-portfolio-button a:hover {
+    opacity: 0.8;
+}
+
 /* End Portfolio Page Center Page Box Specific Styles */
 
 /* Portfolio Page Center Page Box Specific Responsive Styles */
@@ -800,6 +838,12 @@ body {
         margin-left: auto;
         margin-right: auto;
         text-align: center;
+    }
+}
+
+@media (max-width: 613px) {
+    #portfolio .portfolio-content .full-portfolio-button a {
+        display: block;
     }
 }
 

@@ -67,8 +67,6 @@ $(document).ready(() => {
 });
 
 $(window).resize(() => {
-    $('body').height(window.innerHeight);
-    
     if($(window).width() > 991) {
         $('.navbar').removeClass('expanded');
         $('.navbar-collapse').removeClass('expanded');

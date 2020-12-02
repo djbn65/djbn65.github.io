@@ -40,7 +40,7 @@ $(document).ready(() => {
     });
 
     $('.navbar li a').each(function() {
-        $(this).html($(this)[0].hash.substr(1));
+        if($(this)[0].hash.startsWith('#')) $(this).html($(this)[0].hash.substr(1));
     });
 
     if($(window).width() < 450) {

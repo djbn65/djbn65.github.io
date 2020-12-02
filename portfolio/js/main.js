@@ -158,23 +158,23 @@ $('#about .gallery-buttons .prev').click(function() {
     rotationHandle = window.setInterval(advanceGallery, galleyRotationInterval * 1000);
 });
 
-// $('#portfolio a').click(function(e) {
-//     e.preventDefault();
+$('#portfolio a').click(function(e) {
+    e.preventDefault();
     
-//     window.localStorage.setItem('activePortfolioFilter', $(this)[0].hash);
-//     var classNameToShow = $(this)[0].hash.substr(1);
+    window.localStorage.setItem('activePortfolioFilter', $(this)[0].hash);
+    var classNameToShow = $(this)[0].hash.substr(1);
 
-//     $('#portfolio a').removeClass('active');
-//     $(this).addClass('active');
+    $('#portfolio a').removeClass('active');
+    $(this).addClass('active');
 
-//     $('#portfolio .portfolio-grid .item').each(function() {
-//         if($(this).hasClass(classNameToShow) || classNameToShow === 'all') {
-//             $(this).css('display', '');
-//         } else {
-//             $(this).css('display', 'none');
-//         }
-//     });
-// });
+    $('#portfolio .portfolio-grid .item').each(function() {
+        if($(this).hasClass(classNameToShow) || classNameToShow === 'all') {
+            $(this).css('display', '');
+        } else {
+            $(this).css('display', 'none');
+        }
+    });
+});
 
 $('#contact form #submit').click(function(e) {
     e.preventDefault();

@@ -357,7 +357,7 @@ body {
     margin: 0;
 }
 
-.center-page-box > .title-text a {
+.center-page-box > .title-text button {
     padding: 5px 20px;
     color: white;
     border-radius: 5px;
@@ -370,7 +370,7 @@ body {
     transition: all 0.2s linear;
 }
 
-.center-page-box > .title-text a:hover {
+.center-page-box > .title-text button:hover {
     opacity: 0.8;
 }
 
@@ -392,7 +392,7 @@ body {
         width: 100%;
     }
 
-    .center-page-box > .title-text a {
+    .center-page-box > .title-text button {
         margin: 30px auto 0 auto;
     }
 }

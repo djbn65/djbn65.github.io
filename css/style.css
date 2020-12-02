@@ -330,6 +330,10 @@ body {
     .navbar {
         padding: calc(var(--uniform-mobile-padding) * 1px);
     }
+
+    .navbar-nav .nav-item.quote-button {
+        margin: auto;
+    }
 }
 
 /* End Navbar Responsive Styles */

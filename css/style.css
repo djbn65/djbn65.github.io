@@ -24,7 +24,8 @@ body {
     color: #4A4A4A;
 }
 
-.title-text {
+.title-text,
+.title-text h2 {
     font-size: 24px;
     font-weight: 900;
     color: initial;
@@ -93,7 +94,7 @@ body {
 
 .form-popup.active {
     opacity: 1;
-    z-index: 1;
+    z-index: 2;
 }
 
 .form-popup .popup img {
@@ -123,7 +124,8 @@ body {
     max-width: 246px;
 }
 
-.form-popup .popup .description span {
+.form-popup .popup .description span,
+.form-popup .popup .subtitle span {
     color: var(--site-accent-color);
 }
 
@@ -265,7 +267,7 @@ body {
     padding-bottom: 0;
     background: white;
     border-radius: 5px;
-    z-index: 0;
+    z-index: 1;
 }
 
 .navbar-brand {
@@ -342,6 +344,34 @@ body {
 .center-page-box > .title-text {
     margin-bottom: 50px;
     margin-top: 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.center-page-box > .title-text > * {
+    width: 33.33%;
+}
+
+.center-page-box > .title-text h2 {
+    margin: 0;
+}
+
+.center-page-box > .title-text button {
+    padding: 5px 20px;
+    color: white;
+    border-radius: 5px;
+    font-weight: 900;
+    font-size: 14px;
+    text-decoration: none;
+    background-color: var(--site-accent-color);
+    margin: auto 0 auto auto;
+    border: none;
+    transition: all 0.2s linear;
+}
+
+.center-page-box > .title-text button:hover {
+    opacity: 0.8;
 }
 
 /* End Center Page Box Styles */
@@ -350,6 +380,20 @@ body {
 @media (max-width: 991px) {
     .center-page-box {
         width: calc(100% - var(--uniform-mobile-padding) * 2px);
+    }
+}
+
+@media (max-width: 613px) {
+    .center-page-box > .title-text {
+        flex-direction: column;
+    }
+
+    .center-page-box > .title-text > * {
+        width: 100%;
+    }
+
+    .center-page-box > .title-text button {
+        margin: 30px auto 0 auto;
     }
 }
 

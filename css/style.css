@@ -292,6 +292,7 @@ body {
 
 .navbar-nav .nav-item.quote-button {
     margin: auto;
+    margin-left: 20px;
 }
 
 .navbar-nav .nav-item.quote-button .nav-link,

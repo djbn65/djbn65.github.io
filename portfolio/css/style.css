@@ -20,7 +20,8 @@ body {
     position: relative;
     overflow-x: hidden;
     color: #4A4A4A;
-    padding-bottom: 200px;
+    height: 100vh;
+    display: flex;
 }
 
 .title-text,
@@ -400,7 +401,9 @@ body {
 
 /* Portfolio Page Center Page Box Specific Styles */
 #portfolio {
-    margin-top: 200px;
+    margin: auto;
+    max-height: calc(100vh - (var(--navbar-total-height) * 1px) - (var(--uniform-padding) * 2px));
+    overflow-y: auto;
 }
 
 #portfolio .tabs {

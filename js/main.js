@@ -39,7 +39,7 @@ $(document).ready(() => {
         $(this).html($(this)[0].hash.substr(1));
     });
 
-    $('.navbar li a').each(function() {
+    $('.navbar li:not(.quote-button) a').each(function() {
         if($(this)[0].hash.startsWith('#')) $(this).html($(this)[0].hash.substr(1));
     });
 

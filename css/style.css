@@ -285,11 +285,17 @@ body {
     transition: all 0.2s linear;
 }
 
+.navbar-nav .nav-item .nav-link.active,
+.navbar-nav .nav-item .nav-link:hover {
+    color: var(--site-accent-color) !important;
+}
+
 .navbar-nav .nav-item.quote-button {
     margin: auto;
 }
 
-.navbar-nav .nav-item.quote-button .nav-link {
+.navbar-nav .nav-item.quote-button .nav-link,
+.navbar-nav .nav-item.quote-button .nav-link.active {
     padding: 2px 15px;
     color: white !important;
     border-radius: 5px;
@@ -300,13 +306,8 @@ body {
     transition: all 0.2s linear;
 }
 
-.navbar-nav .nav-item .quote-button .nav-link:hover {
+.navbar-nav .nav-item.quote-button .nav-link:hover {
     opacity: 0.8;
-}
-
-.navbar-nav .nav-item .nav-link.active,
-.navbar-nav .nav-item .nav-link:hover {
-    color: var(--site-accent-color) !important;
 }
 
 .navbar-collapse {

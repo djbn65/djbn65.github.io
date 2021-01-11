@@ -90,6 +90,17 @@ a {
 .navbar {
   padding: 50px;
   padding-bottom: 0;
+  background: black;
+}
+
+.navbar-nav {
+  text-align: center;
+  background: black;
+}
+
+.nav-link {
+  padding: 0.3rem 1rem;
+  transition: all 0.2s linear;
 }
 
 .navbar-brand {

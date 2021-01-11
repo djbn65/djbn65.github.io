@@ -4,8 +4,59 @@ $(document).ready(function() {
     lockAnchors: true,
     anchors: ['landing', 'about1', 'about2', 'work', 'clients', 'services', 'contact'],
     autoScrolling: true,
-    normalScrollElements: '#work-popup'
+    normalScrollElements: '#work-popup',
+    onLeave: function(origin, destination, direction) {
+      if(origin.index == 0 && direction == 'down'){
+        $('#main-nav').css('opacity', '1');
+        $('#main-nav .navbar-brand').css('opacity', '1');
+      } else if(origin.index == 1 && direction == 'up') {
+        if($(window).width() > 535) {
+          $('#main-nav').css('opacity', '0');
+        } else {
+          $('#main-nav .navbar-brand').css('opacity', '0');
+        }
+      }
+    }
   });
+});
+
+$(window).ready(function() {
+  if($(window).width() > 535 && $('.landing').hasClass('active')) {
+    $('#main-nav').css('opacity', '0');
+  } else if ($(window).width() <= 535 && $('.landing').hasClass('active')) {
+    $('#main-nav .navbar-brand').css('opacity', '0');
+  }
+});
+
+$(window).resize(function() {
+  $.fn.fullpage.destroy('all');
+
+  $('#fullpage').fullpage({
+    //options here
+    lockAnchors: true,
+    anchors: ['landing', 'about1', 'about2', 'work', 'clients', 'services', 'contact'],
+    autoScrolling: true,
+    normalScrollElements: '#work-popup',
+    onLeave: function(origin, destination, direction) {
+      if(origin.index == 0 && direction == 'down'){
+        $('#main-nav').css('opacity', '1');
+        $('#main-nav .navbar-brand').css('opacity', '1');
+      } else if(origin.index == 1 && direction == 'up') {
+        if($(window).width() > 535) {
+          $('#main-nav').css('opacity', '0');
+        } else {
+          $('#main-nav .navbar-brand').css('opacity', '0');
+        }
+      }
+    }
+  });
+  
+  if($(window).width() > 535 && $('.landing').hasClass('active')) {
+    $('#main-nav').css('opacity', '0');
+  } else if ($(window).width() <= 535 && $('.landing').hasClass('active')) {
+    $('#main-nav').css('opacity', '1');
+    $('#main-nav .navbar-brand').css('opacity', '0');
+  }
 });
 
 $('.work-grid img').click(function() {
@@ -22,4 +73,12 @@ $('.work-grid img').click(function() {
 
 $('.close-popup').click(() => {
   $('#work-popup').removeClass('open');
+});
+
+$('.navbar-nav > li > a').click(() => {
+  $('.navbar-collapse').collapse('hide');
+});
+
+$('.navbar-brand').click(() => {
+  $('.navbar-collapse').collapse('hide');
 });

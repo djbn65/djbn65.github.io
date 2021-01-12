@@ -446,6 +446,7 @@ a {
 @media (max-width: 535px) {
   .work .section-container .section-info .work-grid {
     display: flex;
+    align-items: flex-start;
     flex-wrap: wrap;
     margin-top: 30px;
   }
@@ -506,6 +507,7 @@ a {
 @media (max-width: 535px) {
   .clients .section-container .section-info .client-grid {
     display: flex;
+    align-items: flex-start;
     flex-wrap: wrap;
     margin-top: 30px;
   }

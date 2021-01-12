@@ -42,11 +42,11 @@ a {
 
 .site-section .section-container .section-info p.description {
   color: #555555;
-  max-width: 528px;
+  max-width: 733px;
   width: fit-content;
   border-top: 2px solid #555555;
   padding-top: 7px;
-  margin-top: 75px;
+  margin-top: 50px;
   margin-bottom: 0;
   font-weight: 500;
   font-size: 24px;
@@ -66,6 +66,7 @@ a {
   .site-section .section-container .section-info p.description {
     font-size: 20px;
     margin-top: 75px;
+    line-height: initial;
   }
 }
 
@@ -521,6 +522,120 @@ a {
 
 /* End Clients Page Styles */
 
+/* Press Page Styles */
+
+.press .section-container .section-info .press-grid {
+  width: 100%;
+  margin-top: 25px;
+  max-height: 465px;
+  padding-right: 20px;
+  overflow-y: scroll;
+}
+
+.press .section-container .section-info .press-grid .press-item {
+  display: flex;
+  padding: 25px;
+  background-color: #1A1A1A;
+  margin-bottom: 25px;
+}
+
+.press .section-container .section-info .press-grid .press-item:last-child {
+  margin-bottom: 0;
+}
+
+.press .section-container .section-info .press-grid .press-item .press-img {
+  height: 100%;
+  margin: auto 0;
+  margin-right: 25px;
+}
+
+.press .section-container .section-info .press-grid .press-item .press-img img {
+  height: 100%;
+  max-height: 100px;
+}
+
+.press .section-container .section-info .press-grid .press-item .press-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.press .section-container .section-info .press-grid .press-item .press-text .title {
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 2px;
+}
+
+.press .section-container .section-info .press-grid .press-item .press-text .subtitle {
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.press .section-container .section-info .press-grid .press-item .press-text .link {
+  font-weight: 900;
+  font-size: 18px;
+  margin: 0;
+  margin-top: auto;
+}
+
+@media (max-width: 826px) {
+  .press .section-container .section-info .press-grid .press-item .press-text .title {
+    font-size: 22px;
+  }
+  
+  .press .section-container .section-info .press-grid .press-item .press-text .subtitle {
+    font-size: 16px;
+  }
+  
+  .press .section-container .section-info .press-grid .press-item .press-text .link {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 765px) {
+  .press .section-container .section-info .press-grid .press-item .press-text .title {
+    font-size: 20px;
+  }
+  
+  .press .section-container .section-info .press-grid .press-item .press-text .subtitle {
+    font-size: 14px;
+  }
+  
+  .press .section-container .section-info .press-grid .press-item .press-text .link {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 720px) {
+  .press .section-container .section-info .press-grid .press-item .press-img {
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  .press .section-container .section-info .press-grid .press-item .press-text {
+    order: -1;
+    margin-right: 25px;
+  }
+
+  .press .section-container .section-info .press-grid .press-item .press-text .title {
+    margin-top: auto;
+  }
+
+  .press .section-container .section-info .press-grid .press-item .press-text .subtitle {
+    display: none;
+  }
+
+  .press .section-container .section-info .press-grid .press-item .press-text .link {
+    font-weight: 500;
+    font-style: italic;
+    order: -1;
+    margin-top: initial;
+  }
+}
+
+/* End Press Page Styles */
+
 /* Services Page Styles */
 
 .services .section-container .section-info .service-grid {
@@ -598,6 +713,7 @@ a {
   border-bottom: 2px solid #555555;
   margin-bottom: 25px;
   color: white;
+  border-radius: 0;
   transition: all 0.2s linear;
 }
 

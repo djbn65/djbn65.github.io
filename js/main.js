@@ -4,15 +4,14 @@ const viewMax = 5000000000;
 $(document).ready(function() {
   $('#fullpage').fullpage({
     //options here
-    lockAnchors: true,
-    anchors: ['landing', 'about1', 'about2', 'work', 'clients', 'services', 'contact'],
+    anchors: ['landing', 'about1', 'about2', 'work', 'clients', 'press', 'services', 'contact'],
     autoScrolling: true,
-    normalScrollElements: '#work-popup',
+    normalScrollElements: '#work-popup, .press-grid',
     onLeave: function(origin, destination, direction) {
       if(origin.index === 0 && direction === 'down'){
         $('#main-nav').css('opacity', '1');
         $('#main-nav .navbar-brand').css('opacity', '1');
-      } else if(origin.index === 1 && direction === 'up') {
+      } else if(destination.index === 0) {
         if($(window).width() > 535) {
           $('#main-nav').css('opacity', '0');
         } else {
@@ -20,7 +19,7 @@ $(document).ready(function() {
         }
       }
 
-      if(destination.index === 2 && direction === 'down' && !viewsAnimated) {
+      if(destination.index === 2 && !viewsAnimated) {
         viewsAnimated = true;
 
         var count = 0;
@@ -55,20 +54,36 @@ $(window).resize(function() {
 
   $('#fullpage').fullpage({
     //options here
-    lockAnchors: true,
-    anchors: ['landing', 'about1', 'about2', 'work', 'clients', 'services', 'contact'],
+    anchors: ['landing', 'about1', 'about2', 'work', 'clients', 'press', 'services', 'contact'],
     autoScrolling: true,
-    normalScrollElements: '#work-popup',
+    normalScrollElements: '#work-popup, .press-grid',
     onLeave: function(origin, destination, direction) {
-      if(origin.index == 0 && direction == 'down'){
+      if(origin.index === 0 && direction === 'down'){
         $('#main-nav').css('opacity', '1');
         $('#main-nav .navbar-brand').css('opacity', '1');
-      } else if(origin.index == 1 && direction == 'up') {
+      } else if(destination.index === 0) {
         if($(window).width() > 535) {
           $('#main-nav').css('opacity', '0');
         } else {
           $('#main-nav .navbar-brand').css('opacity', '0');
         }
+      }
+
+      if(destination.index === 2 && direction === 'down' && !viewsAnimated) {
+        viewsAnimated = true;
+
+        var count = 0;
+
+        const interval = setInterval(() => {
+            count += 7765432;
+
+            if(count < viewMax) {
+              $('.about2 .views').text(count.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "+");
+            } else {
+              $('.about2 .views').text(viewMax.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "+");
+              clearInterval(interval);
+            }
+        }, 1);
       }
     }
   });
@@ -103,4 +118,38 @@ $('.navbar-nav > li > a').click(() => {
 
 $('.navbar-brand').click(() => {
   $('.navbar-collapse').collapse('hide');
+});
+
+$('.contact form #submit').click(function(e) {
+  e.preventDefault();
+
+  $.ajax({
+    url: 'https://formspree.io/f/mbjpapda',
+    type: 'POST',
+    dataType: "json",
+    data: {
+        Name: $('#name-input').val(),
+        Email: $('#email-input').val(),
+        Message: $('#message-input').val()
+    },
+    success: function() {
+        $('#contact-form').trigger('reset');
+        // $('.form-popup').addClass('active');
+        // $('.form-popup .popup.failed').css('display', 'none');
+        // $('.form-popup .popup.confirm').css('display', 'flex');
+
+        // window.setTimeout(function() {
+        //     $('.form-popup').removeClass('active');
+        // }, 3000);
+    },
+    error: function() {
+        // $('.form-popup').addClass('active');
+        // $('.form-popup .popup.failed').css('display', 'flex');
+        // $('.form-popup .popup.confirm').css('display', 'none');
+
+        // window.setTimeout(function() {
+        //     $('.form-popup').removeClass('active');
+        // }, 3000);
+    }
+  });
 });

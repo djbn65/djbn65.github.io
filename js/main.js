@@ -69,7 +69,7 @@ $(window).resize(function() {
         }
       }
 
-      if(destination.index === 2 && direction === 'down' && !viewsAnimated) {
+      if(destination.index === 2 && !viewsAnimated) {
         viewsAnimated = true;
 
         var count = 0;

@@ -189,8 +189,9 @@ a {
 
 .landing img.downarrow {
   position: absolute;
+  width: 40px;
   bottom: 32px;
-  left: calc(50% - 25px);
+  left: calc(50% - 20px);
   transition: all 0.2s linear;
   animation: arrowAnimation 1s ease-in-out 0s infinite alternate;
 }
@@ -551,6 +552,7 @@ a {
   background-color: #1A1A1A;
   margin-bottom: 25px;
   cursor: pointer;
+  width: 100%;
   transition: all 0.2s linear;
 }
 
@@ -665,20 +667,33 @@ a {
   .press .section-container .section-info .press-grid .press-item .press-text .link {
     font-size: 12px;
   }
+
+  .press .section-container .section-info .press-grid {
+    padding-right: 0;
+  }
+
+  .press .section-container .section-info .press-grid::-webkit-scrollbar {
+    background: initial;
+    width: inherit;
+  }
+  
+  .press .section-container .section-info .press-grid::-webkit-scrollbar-thumb {
+    background: initial;
+  }
 }
 
 @media (max-width: 400px) {
   .press .section-container .section-info .press-grid .press-item {
-    flex-direction: column;
-    padding: 20px;
+    padding: 15px;
   }
 
-  .press .section-container .section-info .press-grid .press-item .press-img {
-    margin: 0 auto;
-    margin-bottom: 20px;
+  .press .section-container .section-info .press-grid .press-item .press-img,
+  .press .section-container .section-info .press-grid .press-item .press-img img {
+    width: 64px;
+    height: 48px;
   }
 
-  .press .section-container .section-info .press-grid .press-item .press-text {
+  /* .press .section-container .section-info .press-grid .press-item .press-text {
     order: 0;
     text-align: center;
     margin-right: 0;
@@ -691,7 +706,7 @@ a {
   .press .section-container .section-info .press-grid .press-item .press-text .link {
     order: 0;
     margin-top: 10px;
-  }
+  } */
 }
 
 /* End Press Page Styles */
@@ -743,6 +758,8 @@ a {
 
   .services .section-container .section-info .service-grid .service {
     width: 100%;
+    margin: 0 !important;
+    margin-bottom: 35px !important;
   }
 
   .services .section-container .section-info .service-grid .service h4,
@@ -782,6 +799,7 @@ a {
   margin-bottom: 25px;
   color: white;
   border-radius: 0;
+  font-size: 18px;
   transition: all 0.2s linear;
 }
 
@@ -863,6 +881,12 @@ a {
 
   .contact .section-container .section-info form .buttons .social-icons a {
     margin-left: 10px;
+  }
+
+  .contact .section-container .section-info form input,
+  .contact .section-container .section-info form textarea,
+  ::placeholder {
+    font-size: 14px;
   }
 }
 

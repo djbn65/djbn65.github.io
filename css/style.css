@@ -629,6 +629,15 @@ a {
 }
 
 @media (max-width: 720px) {
+  .press .section-container .section-info {
+    margin-top: 100px;
+    height: calc(100vh - 125px);
+  }
+
+  .press .section-container .section-info .press-grid {
+    max-height: initial;
+  }
+
   .press .section-container .section-info .press-grid .press-item .press-img {
     margin-right: 0;
     margin-left: auto;

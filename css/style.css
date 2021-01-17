@@ -631,8 +631,6 @@ a {
 @media (max-width: 720px) {
   .press .section-container .section-info {
     margin-top: 100px;
-    height: 100vh;
-    height: -webkit-fill-available;
     padding-bottom: 25px;
   }
 

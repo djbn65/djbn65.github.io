@@ -1,6 +1,10 @@
 var viewsAnimated = false;
 const viewMax = 5000000000;
 
+function goToDataLink() {
+  window.open($(this).data('link'), '_blank');
+}
+
 $(document).ready(function() {
   $('#fullpage').fullpage({
     //options here
@@ -153,3 +157,5 @@ $('.contact form #submit').click(function(e) {
     }
   });
 });
+
+$('.press .press-grid .press-item').click(goToDataLink);
